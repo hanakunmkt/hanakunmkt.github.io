@@ -101,8 +101,8 @@ section.sec{scroll-margin-top:68px;padding-block:52px 12px}
 
 /* 框 */
 .frame{position:relative;border:2px solid var(--green);border-radius:26px;background:color-mix(in srgb,var(--card) 70%,transparent);padding:clamp(20px,3vw,34px)}
-.seal{display:inline-grid;place-items:center;width:30px;height:30px;background:var(--red);color:#FFF8EE;font-family:var(--display);font-weight:700;font-size:17px;border-radius:3px;line-height:1}
-.frame>.seal{position:absolute;right:18px;top:-15px;rotate:6deg}
+.seal{display:inline-block;width:42px;height:42px;background:url("img/seal.png") center/contain no-repeat;font-size:0;color:transparent;line-height:0}
+.frame>.seal{position:absolute;right:16px;top:-21px}
 
 /* 案例 */
 .cases{display:grid;gap:22px}
@@ -392,7 +392,7 @@ a.pic:hover .im{transform:translateY(-5px) rotate(-1deg);border-color:var(--gree
     <div class="cases">
 
       <article class="frame case rv">
-        <span class="seal">君</span>
+        <span class="seal" aria-hidden="true">君</span>
         <header class="case-head"><span class="tag">社群｜會員活動</span><h3>痛點：會員不夠多、回購率太低</h3></header>
         <ol class="story">
           <li class="st"><span class="lb">問題</span><p>有辦會員活動，但沒什麼人記得，也沒帶動加入和回購。</p></li>
@@ -413,7 +413,7 @@ a.pic:hover .im{transform:translateY(-5px) rotate(-1deg);border-color:var(--gree
       </article>
 
       <article class="frame case rv">
-        <span class="seal">君</span>
+        <span class="seal" aria-hidden="true">君</span>
         <header class="case-head"><span class="tag">SEO／GEO 文章</span><h3>痛點：官網有商品，客人卻搜尋不到</h3></header>
         <ol class="story">
           <li class="st"><span class="lb">問題</span><p>客人上 Google 找答案時，看到的都是別家的文章和商品。</p></li>
@@ -441,7 +441,7 @@ a.pic:hover .im{transform:translateY(-5px) rotate(-1deg);border-color:var(--gree
       </article>
 
       <article class="frame case rv">
-        <span class="seal">君</span>
+        <span class="seal" aria-hidden="true">君</span>
         <header class="case-head"><span class="tag">短影音</span><h3>痛點：想拍影片，卻不知道拍什麼</h3></header>
         <ol class="story">
           <li class="st"><span class="lb">問題</span><p>圖文很難把品牌的故事講清楚，客人對品牌沒感覺。</p></li>
@@ -466,7 +466,7 @@ a.pic:hover .im{transform:translateY(-5px) rotate(-1deg);border-color:var(--gree
       </article>
 
       <article class="frame case rv">
-        <span class="seal">君</span>
+        <span class="seal" aria-hidden="true">君</span>
         <header class="case-head"><span class="tag">Threads 經營</span><h3>痛點：發了廣告文，Threads 上沒人理</h3></header>
         <ol class="story">
           <li class="st"><span class="lb">問題</span><p>Threads 的使用者不想看廣告，一直發商品文只會被滑掉。</p></li>
@@ -492,7 +492,7 @@ a.pic:hover .im{transform:translateY(-5px) rotate(-1deg);border-color:var(--gree
     <div class="svc">
 
       <div class="frame wide rv" id="check" style="scroll-margin-top:80px">
-        <span class="seal">君</span>
+        <span class="seal" aria-hidden="true">君</span>
         <h3><span class="no">01</span>入門健檢</h3>
         <div class="price">免費<small>每月限 5 位</small></div>
         <button type="button" class="pick check-pick btnreset" data-item="免費健檢" aria-pressed="false"><span class="add" data-on="已加入免費健檢" data-off="加入免費健檢">加入免費健檢</span></button>
