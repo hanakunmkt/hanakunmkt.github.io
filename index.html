@@ -174,9 +174,10 @@ a.pic:hover .im{transform:translateY(-5px) rotate(-1deg);border-color:var(--gree
 
 /* 方案選擇 */
 .pick{cursor:pointer;position:relative;transition:transform .35s var(--pop),border-color .2s,box-shadow .3s,background .2s}
-.pick .add{display:inline-flex;align-items:center;gap:4px;font-size:13px;font-weight:700;color:var(--green);border:1.5px solid var(--green);border-radius:999px;padding:1px 10px;background:var(--card);white-space:nowrap}
+.pick .add{display:inline-flex;align-items:center;gap:4px;font-size:15px;font-weight:700;color:#FFF8EE;background:var(--red);border:2px solid var(--red);border-radius:999px;padding:4px 16px;white-space:nowrap;box-shadow:0 3px 0 -1px #8E2219;transition:transform .3s var(--pop)}
+.pick:hover .add{transform:translateY(-2px) scale(1.05)}
 .pick .add::before{content:"＋"}
-.pick[aria-pressed="true"] .add{background:var(--red);border-color:var(--red);color:#FFF8EE}
+.pick[aria-pressed="true"] .add{background:var(--green);border-color:var(--green);color:#FFF8EE;box-shadow:0 3px 0 -1px #123A1B}
 .pick[aria-pressed="true"] .add::before{content:"✓"}
 .tier.pick[aria-pressed="true"]{border:2px solid var(--red);background:#FFF8EE}
 .tier .add{position:absolute;right:14px;top:16px}
@@ -185,6 +186,9 @@ a.pic:hover .im{transform:translateY(-5px) rotate(-1deg);border-color:var(--gree
 .mini tr.pick[aria-pressed="true"] td{background:#FBE9E4}
 .mini tr.pick td:first-child{display:flex;align-items:center;gap:10px}
 .check-pick{justify-self:start}
+.check-pick .add{font-size:18px;padding:8px 24px;font-family:var(--display)}
+.th-pick{border:0;cursor:pointer}
+.th-pick[aria-pressed="true"]{background:var(--green);box-shadow:0 6px 0 -1px #123A1B}
 .cart{margin-top:26px;border:2px solid var(--green);border-radius:22px;background:var(--card);padding:18px 22px;display:grid;gap:10px}
 .cart h3{margin:0;font-family:var(--display);font-weight:700;color:var(--green);font-size:22px}
 .cart .msg{background:#FFF8EE;border:1.5px dashed var(--line);border-radius:14px;padding:10px 14px;margin:0;color:var(--text)}
@@ -364,7 +368,7 @@ a.pic:hover .im{transform:translateY(-5px) rotate(-1deg);border-color:var(--gree
 
       <article class="frame case rv">
         <span class="seal">君</span>
-        <header class="case-head"><span class="tag">社群｜會員活動</span><h3>會員不夠多、回購率太低</h3></header>
+        <header class="case-head"><span class="tag">社群｜會員活動</span><h3>痛點：會員不夠多、回購率太低</h3></header>
         <ol class="story">
           <li class="st"><span class="lb">問題</span><p>有辦會員活動，但沒什麼人記得，也沒帶動加入和回購。</p></li>
           <li class="st"><span class="lb">做法</span><p>研究競品的會員制度，把會員日包裝成有記憶點的主題活動；實體活動現場再搭配「加入會員＋分享抽獎」，讓客人順手幫你曝光。</p></li>
@@ -385,11 +389,11 @@ a.pic:hover .im{transform:translateY(-5px) rotate(-1deg);border-color:var(--gree
 
       <article class="frame case rv">
         <span class="seal">君</span>
-        <header class="case-head"><span class="tag">SEO／GEO 文章</span><h3>官網有商品，客人卻搜尋不到</h3></header>
+        <header class="case-head"><span class="tag">SEO／GEO 文章</span><h3>痛點：官網有商品，客人卻搜尋不到</h3></header>
         <ol class="story">
           <li class="st"><span class="lb">問題</span><p>客人上 Google 找答案時，看到的都是別家的文章和商品。</p></li>
           <li class="st"><span class="lb">做法</span><p>找出客人真正在搜尋的關鍵字，分析競品後規劃文章架構再寫；上線後持續追蹤排名，排不上去就再優化。</p></li>
-          <li class="st res"><span class="lb">成果</span><div class="big">3<small>篇</small></div><div class="cap">Google 排名 #1、#1、#2</div><p>2 篇拿下 Google 第 1 名、1 篇第 2 名，3 篇都被 Google AI 摘要引用，客人一搜尋就看到品牌。</p></li>
+          <li class="st res"><span class="lb">成果</span><div class="big">多<small>篇</small></div><div class="cap">Google 排名 #1、#1、#2</div><p>多篇文章拿下 Google 第 1、2 名，也都被 Google AI 摘要引用，客人一搜尋就看到品牌。</p></li>
         </ol>
         <div class="gallery g3">
           <p class="gh">實際文章</p>
@@ -413,11 +417,11 @@ a.pic:hover .im{transform:translateY(-5px) rotate(-1deg);border-color:var(--gree
 
       <article class="frame case rv">
         <span class="seal">君</span>
-        <header class="case-head"><span class="tag">短影音</span><h3>想拍影片，卻不知道拍什麼</h3></header>
+        <header class="case-head"><span class="tag">短影音</span><h3>痛點：想拍影片，卻不知道拍什麼</h3></header>
         <ol class="story">
           <li class="st"><span class="lb">問題</span><p>圖文很難把品牌的故事講清楚，客人對品牌沒感覺。</p></li>
           <li class="st"><span class="lb">做法</span><p>從企劃、腳本到剪輯、文案一次做完，依目的拍成不同類型的影片。</p></li>
-          <li class="st res"><span class="lb">成果</span><div class="big">3<small>種影片</small></div><div class="cap">品牌故事、議題討論、時事內容</div><p>品牌故事讓客人認同你，議題討論帶動留言，時事內容搭上話題增加觸及。</p></li>
+          <li class="st res"><span class="lb">成果</span><div class="big">多種<small>影片類型</small></div><div class="cap">品牌故事、議題討論、時事內容</div><p>品牌故事讓客人認同你，議題討論帶動留言，時事內容搭上話題增加觸及。</p></li>
         </ol>
         <div class="gallery g3 reels">
           <p class="gh">實際影片</p>
@@ -438,7 +442,7 @@ a.pic:hover .im{transform:translateY(-5px) rotate(-1deg);border-color:var(--gree
 
       <article class="frame case rv">
         <span class="seal">君</span>
-        <header class="case-head"><span class="tag">Threads 經營</span><h3>發了廣告文，Threads 上沒人理</h3></header>
+        <header class="case-head"><span class="tag">Threads 經營</span><h3>痛點：發了廣告文，Threads 上沒人理</h3></header>
         <ol class="story">
           <li class="st"><span class="lb">問題</span><p>Threads 的使用者不想看廣告，一直發商品文只會被滑掉。</p></li>
           <li class="st"><span class="lb">做法</span><p>讓品牌帳號像真人一樣聊天：主動到相關話題下留言、有活動就去對的貼文分享、看到網友的抱怨馬上接話，把它變成品牌活動。</p></li>
@@ -449,7 +453,7 @@ a.pic:hover .im{transform:translateY(-5px) rotate(-1deg);border-color:var(--gree
           <figure class="pic"><span class="im"><img src="img/th-bags-result.jpg" alt="紙袋回收活動收到的大量紙袋" width="500" height="888" loading="lazy" style="object-position:50% 40%"></span><figcaption class="t">紙袋回收活動收到的紙袋</figcaption></figure>
           <div class="addon-box">
             <p><b>Threads 也想有人顧？</b>Threads 小編代營運可以另外加購，私訊告訴我你的需求，再依需求報價。</p>
-            <a class="btn main" href="https://ig.me/m/hanakun.mkt" target="_blank" rel="noopener">私訊詢問</a>
+            <button type="button" class="btn main pick th-pick" aria-pressed="false" data-item="Threads 小編代營運（另外報價）">我想要 Threads</button>
           </div>
         </div>
       </article>
@@ -466,7 +470,7 @@ a.pic:hover .im{transform:translateY(-5px) rotate(-1deg);border-color:var(--gree
         <span class="seal">君</span>
         <h3><span class="no">01</span>入門健檢</h3>
         <div class="price">免費<small>每月限 5 位</small></div>
-        <button type="button" class="pick check-pick btnreset" data-item="免費健檢" aria-pressed="false"><span class="add">加入</span></button>
+        <button type="button" class="pick check-pick btnreset" data-item="免費健檢" aria-pressed="false"><span class="add" data-on="已加入免費健檢" data-off="加入免費健檢">加入免費健檢</span></button>
         <ul class="ticks">
           <li>幫你找出 IG 或 FB 帳號（擇一）現在卡在哪裡</li>
           <li>7 天內給你書面報告和改善方向，再約 15 分鐘線上說明</li>
@@ -579,7 +583,6 @@ a.pic:hover .im{transform:translateY(-5px) rotate(-1deg);border-color:var(--gree
       <details class="rv"><summary>請問可以接急件嗎？</summary><p>交件時間少於 3 個工作天視為急件，會依當時檔期評估是否能承接，若可承接，每件酌收 NT$1,000。</p></details>
       <details class="rv"><summary>影片素材需要什麼時候提供呢？</summary><p>麻煩您於預定發布日前 5 個工作天提供素材。若素材晚到，該支影片將順延 3 個工作天發布，圖文則照常進行；可連續順延，但不跨月，若至月底仍未收到素材，該支影片將取消並減免 NT$1,000。</p></details>
       <details class="rv"><summary>服務有包含拍攝、回覆留言與私訊嗎？</summary><p>社群代營運不包含拍攝，也不包含回覆留言與私訊，素材需麻煩您提供，敬請見諒。</p></details>
-      <details class="rv"><summary>請問所有產業都能合作嗎？</summary><p>合作前會先了解您的產業與需求，確認能真正為您帶來幫助後，才會開始合作。</p></details>
     </div>
   </section>
 
@@ -630,7 +633,7 @@ a.pic:hover .im{transform:translateY(-5px) rotate(-1deg);border-color:var(--gree
   function chosen(){return picks.filter(function(p){return p.getAttribute('aria-pressed')==='true';});}
   function render(){
     var c=chosen();
-    picks.forEach(function(p){var t=p.querySelector('.add'); if(t) t.textContent=p.getAttribute('aria-pressed')==='true'?'已選':'加入';});
+    picks.forEach(function(p){var t=p.querySelector('.add'); var on=p.getAttribute('aria-pressed')==='true'; if(t) t.textContent=on?(t.dataset.on||'已選'):(t.dataset.off||'加入'); if(p.classList.contains('th-pick')) p.textContent=on?'✓ 已加入 Threads':'我想要 Threads';});
     if(!c.length){text='';msg.textContent='點選上面的方案，就會出現在這裡。';msg.classList.add('empty');go.setAttribute('aria-disabled','true');bar.hidden=true;return;}
     text='我對花君行銷有興趣！我想要：'+c.map(function(p){return p.dataset.item;}).join('＋');
     msg.textContent=text;msg.classList.remove('empty');go.removeAttribute('aria-disabled');
