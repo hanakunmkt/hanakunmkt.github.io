@@ -215,6 +215,20 @@ a.pic:hover .im{transform:translateY(-5px) rotate(-1deg);border-color:var(--gree
 .toast{position:fixed;left:50%;top:76px;translate:-50% 0;z-index:40;background:var(--text);color:#FFF8EE;border-radius:12px;padding:10px 16px;font-size:14px;max-width:calc(100% - 32px);text-align:center;opacity:0;pointer-events:none;transition:opacity .3s}
 .toast.on{opacity:1}
 
+
+/* 收合 */
+.fold-h{cursor:pointer;position:relative;padding-right:46px;user-select:none}
+.fold-h::after{content:"";position:absolute;right:0;top:50%;width:32px;height:32px;translate:0 -50%;border-radius:50%;background:var(--green) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23FFF8EE' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E") center/18px no-repeat;transition:rotate .3s}
+.fold.open>.fold-h::after{rotate:180deg}
+.fold-h:hover::after{background-color:var(--red)}
+.fold:not(.open)>:not(.fold-h):not(.seal){display:none}
+.fold:not(.open)>.fold-h{margin-bottom:0}
+.sec-head.fold-h{padding-right:0}
+.sec-head.fold-h::after{position:relative;display:inline-block;vertical-align:middle;right:auto;top:-4px;translate:none;margin-left:12px}
+.fold-hint{margin:8px auto 4px!important;font-size:14px;color:var(--muted)}
+.fold.open .fold-hint{display:none}
+.sec.fold:not(.open){padding-bottom:0}
+
 /* 服務與價格 */
 .svc{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
 .svc .frame{display:grid;gap:12px;align-content:start}
@@ -373,8 +387,8 @@ a.pic:hover .im{transform:translateY(-5px) rotate(-1deg);border-color:var(--gree
   </header>
 
   <!-- 成功案例 -->
-  <section class="sec" id="cases">
-    <div class="sec-head rv"><span class="en">results</span><h2>成功案例</h2></div>
+  <section class="sec fold" id="cases">
+    <div class="sec-head rv fold-h" role="button" tabindex="0" aria-expanded="false"><span class="en">results</span><h2>成功案例</h2><p class="fold-hint">點標題展開看所有案例</p></div>
     <div class="cases">
 
       <article class="frame case rv">
@@ -473,8 +487,8 @@ a.pic:hover .im{transform:translateY(-5px) rotate(-1deg);border-color:var(--gree
   </section>
 
   <!-- 服務與價格 -->
-  <section class="sec" id="pricing">
-    <div class="sec-head rv"><span class="en">services &amp; pricing</span><h2>服務與價格</h2></div>
+  <section class="sec fold" id="pricing">
+    <div class="sec-head rv fold-h" role="button" tabindex="0" aria-expanded="false"><span class="en">services &amp; pricing</span><h2>服務與價格</h2><p class="fold-hint">點標題展開看所有方案與價格</p></div>
     <div class="svc">
 
       <div class="frame wide rv" id="check" style="scroll-margin-top:80px">
@@ -690,6 +704,19 @@ a.pic:hover .im{transform:translateY(-5px) rotate(-1deg);border-color:var(--gree
   if('IntersectionObserver' in window){
     new IntersectionObserver(function(es){ es.forEach(function(e){ bar.style.opacity=e.isIntersecting?'0':''; bar.style.pointerEvents=e.isIntersecting?'none':''; }); }).observe(cart);
   }
+})();
+
+(function(){
+  var folds=[].slice.call(document.querySelectorAll('.fold'));
+  function set(f,on){ f.classList.toggle('open',on); var h=f.querySelector('.fold-h'); if(h) h.setAttribute('aria-expanded',on?'true':'false'); }
+  folds.forEach(function(f){
+    var h=f.querySelector('.fold-h');
+    h.addEventListener('click',function(){ set(f,!f.classList.contains('open')); });
+    h.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); set(f,!f.classList.contains('open')); } });
+  });
+  function openHash(id){ var t=id&&document.getElementById(id); var f=t&&t.closest('.fold'); if(f) set(f,true); }
+  document.addEventListener('click',function(e){ var a=e.target.closest&&e.target.closest('a[href^="#"]'); if(a) openHash(a.getAttribute('href').slice(1)); });
+  openHash(location.hash.slice(1));
 })();
 </script>
 </body>
