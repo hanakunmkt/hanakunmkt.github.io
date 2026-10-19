@@ -161,16 +161,17 @@ a.pic:hover .im{transform:translateY(-5px) rotate(-1deg);border-color:var(--gree
 .case{display:block}
 .case-head{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;margin-bottom:18px}
 .case-head h3{margin:0;font-size:clamp(21px,2.6vw,26px)}
-.story{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr 1.15fr;gap:28px}
-.st{position:relative;border:1.5px solid var(--line);border-radius:18px;background:var(--card);padding:16px 18px;display:grid;align-content:start;gap:6px}
-.st+.st::before{content:"";position:absolute;left:-23px;top:50%;width:18px;height:18px;translate:0 -50%;background:var(--green);clip-path:polygon(0 15%,60% 15%,60% 0,100% 50%,60% 100%,60% 85%,0 85%)}
+.story{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr 1.15fr;gap:34px}
+.st{position:relative;padding:0;display:grid;align-content:start;gap:4px}
+.st+.st::before{content:"";position:absolute;left:-26px;top:3px;width:18px;height:18px;translate:0 -50%;background:var(--green);clip-path:polygon(0 15%,60% 15%,60% 0,100% 50%,60% 100%,60% 85%,0 85%)}
 .st .lb{justify-self:start;font-family:var(--display);font-weight:700;color:#FFF8EE;background:var(--green);border-radius:8px;padding:1px 14px;font-size:15px}
-.st p{margin:0;font-size:15px;line-height:1.75}
-.st.res{border:2px solid var(--red);background:#FFF8EE}
+.st p{margin:0;font-size:14.5px;line-height:1.7}
+.st.res{}
 .st.res .lb{background:var(--red)}
-.st .big{font-size:clamp(40px,5vw,56px)}
-.st .cap{font-size:17px}
-.case .gallery{margin-top:22px}
+.st .big{font-size:clamp(30px,3.6vw,40px);line-height:1.1}
+.st .cap{font-size:15px}
+.case .gallery{margin-top:18px}
+.case-head{margin-bottom:12px}
 
 /* 方案選擇 */
 .pick{cursor:pointer;position:relative;transition:transform .35s var(--pop),border-color .2s,box-shadow .3s,background .2s}
@@ -202,6 +203,14 @@ a.pic:hover .im{transform:translateY(-5px) rotate(-1deg);border-color:var(--gree
 .cartbar[hidden]{display:none}
 .cartbar span{font-size:14px;white-space:nowrap;flex:none}
 .cartbar a{flex:none;background:var(--red);color:#FFF8EE;text-decoration:none;border-radius:999px;padding:6px 16px;font-family:var(--display);font-weight:700;font-size:15px}
+.dm{position:fixed;inset:0;z-index:50;background:rgba(30,40,32,.45);display:grid;place-items:center;padding:16px}
+.dm[hidden]{display:none}
+.dm .box{background:var(--paper);border:2px solid var(--green);border-radius:22px;padding:22px;max-width:460px;width:100%;display:grid;gap:12px}
+.dm h3{margin:0;font-family:var(--display);color:var(--green);font-size:22px}
+.dm .msg{background:#FFF8EE;border:1.5px dashed var(--line);border-radius:14px;padding:10px 14px;margin:0}
+.dm ol{margin:0;padding-left:1.3em;font-size:15px}
+.dm .row{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center}
+.dm .x{background:none;border:0;color:var(--muted);text-decoration:underline;cursor:pointer;font:inherit;font-size:14px}
 .toast{position:fixed;left:50%;top:76px;translate:-50% 0;z-index:40;background:var(--text);color:#FFF8EE;border-radius:12px;padding:10px 16px;font-size:14px;max-width:calc(100% - 32px);text-align:center;opacity:0;pointer-events:none;transition:opacity .3s}
 .toast.on{opacity:1}
 
@@ -292,7 +301,8 @@ a.pic:hover .im{transform:translateY(-5px) rotate(-1deg);border-color:var(--gree
   .hero-art .hello{left:-18%;bottom:-14%;font-size:14px}
   .case{grid-template-columns:1fr}
   .story{grid-template-columns:1fr;gap:26px}
-  .st+.st::before{left:50%;top:-23px;translate:-50% 0;rotate:90deg}
+  .story{gap:16px}
+  .st+.st::before{display:none}
   .g3{grid-template-columns:1fr}
   .reels.g3{grid-template-columns:repeat(3,1fr);gap:10px}
   .reel .t{font-size:13px}
@@ -538,7 +548,7 @@ a.pic:hover .im{transform:translateY(-5px) rotate(-1deg);border-color:var(--gree
         <a class="btn main" id="cartGo" href="https://ig.me/m/hanakun.mkt" target="_blank" rel="noopener" aria-disabled="true">私訊花君</a>
         <button type="button" class="clear" id="cartClear">清除選擇</button>
       </div>
-      <p class="hint">按下「私訊花君」會自動複製上面這段訊息並開啟 IG 私訊，貼上就能送出。</p>
+      <p class="hint">按下「私訊花君」會幫您複製這段訊息，到 IG 私訊貼上就能送出。</p>
     </div>
   </section>
 
@@ -603,6 +613,12 @@ a.pic:hover .im{transform:translateY(-5px) rotate(-1deg);border-color:var(--gree
   </footer>
 </main>
 <div class="cartbar" id="cartbar" hidden><span id="cartbarTx"></span><a href="#cart">查看並私訊</a></div>
+<div class="dm" id="dm" hidden role="dialog" aria-modal="true" aria-labelledby="dmT"><div class="box">
+  <h3 id="dmT">訊息已幫您複製好了</h3>
+  <p class="msg" id="dmMsg"></p>
+  <ol><li>按下「前往 IG 私訊」</li><li>在訊息框貼上（電腦按 Ctrl＋V，手機長按選「貼上」）</li><li>送出，花君就會收到您選的方案</li></ol>
+  <div class="row"><a class="btn main" id="dmGo" href="https://ig.me/m/hanakun.mkt" target="_blank" rel="noopener">前往 IG 私訊</a><button type="button" class="x" id="dmX">返回修改</button></div>
+</div></div>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <script>
@@ -650,16 +666,25 @@ a.pic:hover .im{transform:translateY(-5px) rotate(-1deg);border-color:var(--gree
   });
   document.getElementById('cartClear').addEventListener('click',function(){picks.forEach(function(p){p.setAttribute('aria-pressed','false');});render();});
   function copy(t){
-    try{ if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(t);return;} }catch(e){}
+    function legacy(){
     var ta=document.createElement('textarea');ta.value=t;ta.setAttribute('readonly','');ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.select();
     try{document.execCommand('copy');}catch(e){} document.body.removeChild(ta);
+    }
+    legacy();
+    try{ if(navigator.clipboard&&window.isSecureContext) navigator.clipboard.writeText(t).catch(function(){}); }catch(e){}
   }
-  go.addEventListener('click',function(){
+  var dm=document.getElementById('dm'),dmGo=document.getElementById('dmGo');
+  go.addEventListener('click',function(e){
+    e.preventDefault();
     if(!text) return;
     copy(text);
-    toast.textContent='訊息已複製，到 IG 私訊貼上就能送出';toast.classList.add('on');
-    setTimeout(function(){toast.classList.remove('on');},4000);
+    document.getElementById('dmMsg').textContent=text;
+    dmGo.href='https://ig.me/m/hanakun.mkt?text='+encodeURIComponent(text);
+    dm.hidden=false; dmGo.focus();
   });
+  dmGo.addEventListener('click',function(){ copy(text); setTimeout(function(){dm.hidden=true;},300); });
+  document.getElementById('dmX').addEventListener('click',function(){dm.hidden=true;});
+  dm.addEventListener('click',function(e){ if(e.target===dm) dm.hidden=true; });
   var cart=document.getElementById('cart');
   if('IntersectionObserver' in window){
     new IntersectionObserver(function(es){ es.forEach(function(e){ bar.style.opacity=e.isIntersecting?'0':''; bar.style.pointerEvents=e.isIntersecting?'none':''; }); }).observe(cart);
