@@ -6,13 +6,13 @@
 <title>花君行銷｜一人 AI 行銷團隊・社群代營運・短影音・SEO／GEO 文章</title>
 <meta name="description" content="花君行銷幫小品牌和個人工作者做社群代營運、短影音剪輯、SEO／GEO 文章，價格公開，先免費健檢再決定要不要合作。">
 <link rel="canonical" href="https://hanakunmkt.github.io/">
-<link rel="icon" href="img/favicon.png?v=2">
+<link rel="icon" href="img/favicon.png?v=3">
 <meta property="og:type" content="website">
 <meta property="og:title" content="花君行銷｜一人 AI 行銷團隊">
 <meta property="og:description" content="社群代營運、短影音、SEO／GEO 文章。填表申請免費健檢。">
-<meta property="og:image" content="https://hanakunmkt.github.io/img/og.png?v=2">
+<meta property="og:image" content="https://hanakunmkt.github.io/img/og.png?v=3">
 <meta property="og:url" content="https://hanakunmkt.github.io/">
-<meta name="theme-color" content="#FFFFFF">
+<meta name="theme-color" content="#F8F5E7">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Yusei+Magic&family=Chiron+GoRound+TC:wght@700&family=LXGW+WenKai+TC:wght@400;700&family=Gochi+Hand&family=Noto+Sans+TC:wght@400;500;700&display=swap">
@@ -22,16 +22,17 @@
 <style>
 :root{
   color-scheme: light;
-  --paper:#FFFFFF;
-  --card:#FFFFFF;
-  --green:#22632E;
-  --green-2:#4A6B55;
-  --tint:#DAE4CF;
-  --tint-2:#C3D3B6;
-  --red:#C8382C;
-  --text:#2E3A30;
-  --muted:#6B7568;
-  --line:#BFCDB4;
+  --paper:#F8F5E7;
+  --card:#F8F5E7;
+  --green:#246930;
+  --green-2:#246930;
+  --tint:#97BF66;
+  --tint-2:#97BF66;
+  --red:#C8382A;
+  --text:#246930;
+  --muted:#246930;
+  --line:#97BF66;
+  --yellow:#E7A72E;
   --display:"Yusei Magic","Chiron GoRound TC","LXGW WenKai TC","Noto Serif TC","PingFang TC",serif;
   --hand:"Gochi Hand","Comic Sans MS",cursive;
   --body:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;
@@ -51,9 +52,9 @@ h1,h2,h3,h4{text-wrap:balance}
 /* 按鈕 */
 .btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--display);font-weight:700;font-size:18px;letter-spacing:.06em;text-decoration:none;
   padding:12px 24px;border-radius:999px;border:2px solid var(--green);transition:transform .35s var(--pop),box-shadow .3s,background .25s}
-.btn.main{background:var(--red);border-color:var(--red);color:#FFFFFF;box-shadow:0 6px 0 -1px #8E2219}
-.btn.main:hover{transform:translateY(-3px) rotate(-1.5deg);box-shadow:0 9px 0 -1px #8E2219}
-.btn.main:active{transform:translateY(3px);box-shadow:0 2px 0 -1px #8E2219}
+.btn.main{background:var(--red);border-color:var(--red);color:#F8F5E7;box-shadow:0 6px 0 -1px #246930}
+.btn.main:hover{transform:translateY(-3px) rotate(-1.5deg);box-shadow:0 9px 0 -1px #246930}
+.btn.main:active{transform:translateY(3px);box-shadow:0 2px 0 -1px #246930}
 .btn.sub{background:transparent;color:var(--green)}
 .btn.sub:hover{background:var(--tint);transform:translateY(-3px)}
 
@@ -69,14 +70,14 @@ h1,h2,h3,h4{text-wrap:balance}
 .nav a.lk{text-decoration:none;position:relative;padding:2px 0;color:var(--green)}
 .nav a.lk::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:2px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .3s}
 .nav a.lk:hover::after,.nav a.lk.on::after{transform:scaleX(1)}
-.nav .price-jump{font-family:var(--display);font-weight:700;font-size:15px;text-decoration:none;color:#FFFFFF;background:var(--green);border-radius:999px;padding:4px 14px;white-space:nowrap;transition:background .25s}
+.nav .price-jump{font-family:var(--display);font-weight:700;font-size:15px;text-decoration:none;color:#F8F5E7;background:var(--green);border-radius:999px;padding:4px 14px;white-space:nowrap;transition:background .25s}
 .nav .price-jump:hover{background:var(--red)}
 .menu-btn{display:flex;flex:none;width:40px;height:40px;border:2px solid var(--green);border-radius:12px;background:var(--card);padding:0;cursor:pointer;flex-direction:column;align-items:center;justify-content:center;gap:4px}
 .menu-btn span{display:block;width:18px;height:2px;border-radius:2px;background:var(--green);transition:transform .25s,opacity .2s}
 .nav.menu-open .menu-btn span:nth-child(1){transform:translateY(6px) rotate(45deg)}
 .nav.menu-open .menu-btn span:nth-child(2){opacity:0}
 .nav.menu-open .menu-btn span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
-.mmenu{position:absolute;left:16px;right:16px;top:calc(100% + 6px);background:var(--card);border:2px solid var(--green);border-radius:18px;padding:8px;display:grid;grid-template-columns:1fr 1fr;gap:6px;box-shadow:0 14px 28px -16px rgba(34,99,46,.5)}
+.mmenu{position:absolute;left:16px;right:16px;top:calc(100% + 6px);background:var(--card);border:2px solid var(--green);border-radius:18px;padding:8px;display:grid;grid-template-columns:1fr 1fr;gap:6px;box-shadow:0 14px 28px -16px rgba(36,105,48,.5)}
 .mmenu[hidden]{display:none}
 @media (min-width:761px){.mmenu{left:auto;right:max(16px,calc((100% - 1080px)/2));width:360px}}
 .mmenu a{display:block;text-align:center;text-decoration:none;color:var(--green);font-weight:500;padding:10px 6px;border-radius:12px;background:var(--paper)}
@@ -94,7 +95,7 @@ h1,h2,h3,h4{text-wrap:balance}
 .hero .ctas{display:flex;flex-wrap:wrap;gap:14px 16px;align-items:center}
 .hero .free{font-size:14px;color:var(--muted);margin:14px 0 0}
 .hero .free b{color:var(--red);font-weight:700}
-.hero-art{position:relative;justify-self:center;width:min(420px,100%)}
+.hero-art{position:relative;justify-self:center;width:min(290px,100%)}
 .hero-art .mark{width:100%;animation:sway 7s ease-in-out infinite;transform-origin:50% 90%}
 @keyframes sway{0%,100%{rotate:-1.2deg}50%{rotate:1.2deg}}
 .hero-art .hello{position:absolute;left:-4%;bottom:6%;background:var(--card);border:2px solid var(--green);border-radius:16px 16px 16px 4px;padding:6px 14px;
@@ -111,8 +112,8 @@ section.sec{scroll-margin-top:68px;padding-block:52px 12px}
 
 /* 框 */
 .frame{position:relative;border:2px solid var(--green);border-radius:26px;background:color-mix(in srgb,var(--card) 70%,transparent);padding:clamp(20px,3vw,34px)}
-.seal{display:inline-block;width:66px;height:26px;background:url("img/glasses.png") center/contain no-repeat;font-size:0;color:transparent;line-height:0}
-.frame>.seal{position:absolute;right:18px;top:-13px}
+.seal{display:inline-block;width:42px;height:42px;rotate:11deg;background:url("img/seal.png?v=2") center/contain no-repeat;font-size:0;color:transparent;line-height:0}
+.frame>.seal{position:absolute;right:16px;top:-21px}
 
 /* 案例 */
 .cases{display:grid;gap:22px}
@@ -126,7 +127,7 @@ section.sec{scroll-margin-top:68px;padding-block:52px 12px}
 .case h3{font-family:var(--display);font-weight:700;color:var(--green);font-size:22px;margin:0 0 10px;letter-spacing:.04em}
 .steps3{margin:0;display:grid;gap:8px}
 .steps3>div{display:grid;grid-template-columns:64px 1fr;gap:10px;align-items:start}
-.steps3 dt{font-family:var(--display);font-weight:700;color:#FFFFFF;background:var(--green);border-radius:8px;text-align:center;font-size:15px;padding:1px 0}
+.steps3 dt{font-family:var(--display);font-weight:700;color:#F8F5E7;background:var(--green);border-radius:8px;text-align:center;font-size:15px;padding:1px 0}
 .steps3 dt.r{background:var(--red)}
 .steps3 dd{margin:0}
 .ranks{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
@@ -175,7 +176,7 @@ a.pic:hover .im{transform:translateY(-5px) rotate(-1deg);border-color:var(--gree
 .story{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr 1.15fr;gap:34px}
 .st{position:relative;padding:0;display:grid;align-content:start;gap:4px}
 .st+.st::before{content:"";position:absolute;left:-26px;top:50%;width:18px;height:18px;translate:0 -50%;background:var(--green);clip-path:polygon(0 15%,60% 15%,60% 0,100% 50%,60% 100%,60% 85%,0 85%)}
-.st .lb{justify-self:start;font-family:var(--display);font-weight:700;color:#FFFFFF;background:var(--green);border-radius:8px;padding:1px 14px;font-size:15px}
+.st .lb{justify-self:start;font-family:var(--display);font-weight:700;color:#F8F5E7;background:var(--green);border-radius:8px;padding:1px 14px;font-size:15px}
 .st p{margin:0;font-size:14.5px;line-height:1.7}
 .st.res{}
 .st.res .lb{background:var(--red)}
@@ -187,16 +188,16 @@ a.pic:hover .im{transform:translateY(-5px) rotate(-1deg);border-color:var(--gree
 /* 方案選擇 */
 .btn[aria-disabled="true"]{opacity:.45;pointer-events:none}
 .fabs{position:fixed;right:16px;bottom:16px;z-index:31;display:flex;flex-direction:column;align-items:flex-end;gap:8px;transition:bottom .3s}
-.fab{display:flex;align-items:center;gap:6px;background:var(--red);color:#FFFFFF;text-decoration:none;border-radius:999px;padding:12px 18px 12px 14px;font-family:var(--display);font-weight:700;font-size:16px;box-shadow:0 10px 24px -10px rgba(0,0,0,.45);transition:bottom .3s,transform .2s}
+.fab{display:flex;align-items:center;gap:6px;background:var(--red);color:#F8F5E7;text-decoration:none;border-radius:999px;padding:12px 18px 12px 14px;font-family:var(--display);font-weight:700;font-size:16px;box-shadow:0 10px 24px -10px rgba(36,105,48,.45);transition:bottom .3s,transform .2s}
 .fab:hover{transform:translateY(-2px)}
 .fab svg{width:24px;height:24px;flex:none}
-.fq{display:block;text-align:center;min-width:7.4em;background:#FFFFFF;color:var(--green);border:2px solid var(--green);border-radius:999px;padding:6px 14px;font-family:var(--display);font-weight:700;font-size:14px;text-decoration:none;white-space:nowrap;box-shadow:0 8px 20px -12px rgba(0,0,0,.45);transition:transform .2s,background .2s,color .2s}
-.fq:hover{background:var(--green);color:#FFFFFF;transform:translateY(-2px)}
+.fq{display:block;text-align:center;min-width:7.4em;background:#F8F5E7;color:var(--green);border:2px solid var(--green);border-radius:999px;padding:6px 14px;font-family:var(--display);font-weight:700;font-size:14px;text-decoration:none;white-space:nowrap;box-shadow:0 8px 20px -12px rgba(36,105,48,.45);transition:transform .2s,background .2s,color .2s}
+.fq:hover{background:var(--green);color:#F8F5E7;transform:translateY(-2px)}
 
 
 /* 收合 */
 .fold-h{cursor:pointer;position:relative;padding-right:46px;user-select:none}
-.fold-h::after{content:"";position:absolute;right:0;top:50%;width:32px;height:32px;translate:0 -50%;border-radius:50%;background:var(--green) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23FFFFFF' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E") center/18px no-repeat;transition:rotate .3s}
+.fold-h::after{content:"";position:absolute;right:0;top:50%;width:32px;height:32px;translate:0 -50%;border-radius:50%;background:var(--green) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23F8F5E7' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E") center/18px no-repeat;transition:rotate .3s}
 .fold.open>.fold-h::after{rotate:180deg}
 .fold-h:hover::after{background-color:var(--red)}
 .fold:not(.open)>:not(.fold-h):not(.seal){display:none}
@@ -222,10 +223,10 @@ a.pic:hover .im{transform:translateY(-5px) rotate(-1deg);border-color:var(--gree
 .ticks li.no{color:var(--muted)}
 .tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .tier{border:1.5px solid var(--line);border-radius:18px;background:var(--card);padding:16px 18px;display:grid;gap:8px;align-content:start;position:relative;transition:transform .4s var(--pop),box-shadow .35s}
-.tier:hover{transform:translateY(-6px);box-shadow:0 16px 26px -18px rgba(34,99,46,.55)}
+.tier:hover{transform:translateY(-6px);box-shadow:0 16px 26px -18px rgba(36,105,48,.55)}
 .tier h4{margin:0;font-family:var(--display);font-weight:700;color:var(--green);font-size:21px}
 .tier.hot{border:2px solid var(--red)}
-.tier .badge{position:absolute;right:14px;top:-13px;background:var(--red);color:#FFFFFF;font-size:13px;border-radius:999px;padding:1px 10px}
+.tier .badge{position:absolute;right:14px;top:-13px;background:var(--red);color:#F8F5E7;font-size:13px;border-radius:999px;padding:1px 10px}
 .mini{width:100%;border-collapse:collapse;font-size:15px}
 .mini td{padding:6px 0;border-bottom:1px dashed var(--line)}
 .mini td:last-child{text-align:right;font-family:var(--display);font-weight:700;color:var(--red);font-size:18px;white-space:nowrap}
@@ -252,7 +253,7 @@ a.pic:hover .im{transform:translateY(-5px) rotate(-1deg);border-color:var(--gree
 .flow{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:14px;counter-reset:s}
 .flow li{position:relative;border:1.5px solid var(--line);border-radius:18px;background:var(--card);padding:34px 14px 14px;text-align:center;counter-increment:s}
 .flow li::before{content:counter(s);position:absolute;left:50%;top:-18px;translate:-50% 0;width:38px;height:38px;border-radius:50%;display:grid;place-items:center;
-  background:var(--green);color:#FFFFFF;font-family:var(--display);font-weight:700;font-size:20px}
+  background:var(--green);color:#F8F5E7;font-family:var(--display);font-weight:700;font-size:20px}
 .flow li:nth-child(4)::before{background:var(--red)}
 .flow b{display:block;font-family:var(--display);color:var(--green);font-size:18px;margin-bottom:4px}
 .flow span{font-size:14px;line-height:1.6;display:block}
@@ -269,7 +270,7 @@ a.pic:hover .im{transform:translateY(-5px) rotate(-1deg);border-color:var(--gree
 
 /* 結尾 */
 .outro{text-align:center;padding-block:64px 40px}
-.outro .logo{width:min(280px,70vw);margin:0 auto 18px}
+.outro .logo{width:min(190px,50vw);margin:0 auto 18px}
 .outro .en{font-family:var(--hand);color:var(--red);font-size:clamp(20px,3vw,28px);letter-spacing:.08em}
 .outro h2{font-family:var(--display);font-weight:700;color:var(--green);font-size:clamp(26px,4vw,40px);margin:4px 0 12px;letter-spacing:.08em}
 .outro p{margin:0 auto 24px;max-width:30em}
@@ -293,7 +294,7 @@ a.pic:hover .im{transform:translateY(-5px) rotate(-1deg);border-color:var(--gree
   .hero .eyebrow::after{display:none}
   .hero .sub{margin-inline:auto}
   .hero .ctas{justify-content:center}
-  .hero-art{order:-1;width:min(300px,80%);margin-bottom:18px}
+  .hero-art{order:-1;width:min(200px,56%);margin-bottom:18px}
   .outro{padding-bottom:240px}
   .hero-art .hello{left:-18%;bottom:-14%;font-size:14px}
   .case{grid-template-columns:1fr}
@@ -338,7 +339,7 @@ a.pic:hover .im{transform:translateY(-5px) rotate(-1deg);border-color:var(--gree
 
 <nav class="nav" id="nav">
   <div class="wrap">
-    <a class="brand" href="#top" aria-label="花君行銷 回到首頁"><img src="img/brand-mark.png" alt="" width="61" height="40"><img class="brand-text" src="img/brand-text.png" alt="花君行銷" width="300" height="64"></a>
+    <a class="brand" href="#top" aria-label="花君行銷 回到首頁"><img src="img/brand-mark.png" alt="" width="32" height="40"><img class="brand-text" src="img/brand-text.png?v=2" alt="花君行銷" width="300" height="64"></a>
     <button type="button" class="menu-btn" id="menuBtn" aria-label="開啟選單" aria-expanded="false" aria-controls="mmenu"><span></span><span></span><span></span></button>
   </div>
   <div class="mmenu" id="mmenu" hidden>
@@ -364,7 +365,7 @@ a.pic:hover .im{transform:translateY(-5px) rotate(-1deg);border-color:var(--gree
       </nav>
     </div>
     <div class="hero-art">
-      <img class="mark" src="img/brand-full.png" alt="花君行銷 hana kun 標誌" width="700" height="639">
+      <img class="mark" src="img/brand-full.png" alt="花君行銷 hana kun 標誌" width="428" height="749">
     </div>
   </header>
 
@@ -374,7 +375,7 @@ a.pic:hover .im{transform:translateY(-5px) rotate(-1deg);border-color:var(--gree
     <div class="cases">
 
       <article class="frame case rv">
-        <span class="seal" aria-hidden="true"></span>
+        <span class="seal" aria-hidden="true">君</span>
         <header class="case-head"><span class="tag">社群｜會員活動</span><h3>痛點：會員不夠多、回購率太低</h3></header>
         <ol class="story">
           <li class="st"><span class="lb">問題</span><p>有辦會員活動，但沒什麼人記得，也沒帶動加入和回購。</p></li>
@@ -395,7 +396,7 @@ a.pic:hover .im{transform:translateY(-5px) rotate(-1deg);border-color:var(--gree
       </article>
 
       <article class="frame case rv">
-        <span class="seal" aria-hidden="true"></span>
+        <span class="seal" aria-hidden="true">君</span>
         <header class="case-head"><span class="tag">SEO／GEO 文章</span><h3>痛點：官網有商品，客人卻搜尋不到</h3></header>
         <ol class="story">
           <li class="st"><span class="lb">問題</span><p>客人上 Google 找答案時，看到的都是別家的文章和商品。</p></li>
@@ -423,7 +424,7 @@ a.pic:hover .im{transform:translateY(-5px) rotate(-1deg);border-color:var(--gree
       </article>
 
       <article class="frame case rv">
-        <span class="seal" aria-hidden="true"></span>
+        <span class="seal" aria-hidden="true">君</span>
         <header class="case-head"><span class="tag">短影音</span><h3>痛點：想拍影片，卻不知道拍什麼</h3></header>
         <ol class="story">
           <li class="st"><span class="lb">問題</span><p>圖文很難把品牌的故事講清楚，客人對品牌沒感覺。</p></li>
@@ -448,7 +449,7 @@ a.pic:hover .im{transform:translateY(-5px) rotate(-1deg);border-color:var(--gree
       </article>
 
       <article class="frame case rv">
-        <span class="seal" aria-hidden="true"></span>
+        <span class="seal" aria-hidden="true">君</span>
         <header class="case-head"><span class="tag">Threads 經營</span><h3>痛點：發了廣告文，Threads 上沒人理</h3></header>
         <ol class="story">
           <li class="st"><span class="lb">問題</span><p>Threads 的使用者不想看廣告，一直發商品文只會被滑掉。</p></li>
@@ -474,7 +475,7 @@ a.pic:hover .im{transform:translateY(-5px) rotate(-1deg);border-color:var(--gree
     <div class="svc">
 
       <div class="frame wide rv" id="check" style="scroll-margin-top:80px">
-        <span class="seal" aria-hidden="true"></span>
+        <span class="seal" aria-hidden="true">君</span>
         <h3><span class="no">01</span>入門健檢</h3>
         <div class="price">免費<small>每月限 5 位</small></div>
         <a class="btn main check-go" href="https://docs.google.com/forms/d/e/1FAIpQLSefFn42wXHG_5L1AD6yZhtWxH4H29DcEFuDZD-j2UNt3qdkSw/viewform" target="_blank" rel="noopener">填表申請免費健檢</a>
@@ -543,7 +544,7 @@ a.pic:hover .im{transform:translateY(-5px) rotate(-1deg);border-color:var(--gree
     <div class="sec-head rv"><span class="en">why hana kun</span><h2>為什麼找花君</h2></div>
     <div class="frame about rv">
       <figure class="me">
-        <img src="img/brand-mark.png" alt="花君行銷的小花眼鏡標誌" width="600" height="396" loading="lazy">
+        <img src="img/brand-mark.png" alt="花君行銷的花椰菜人標誌" width="420" height="520" loading="lazy">
       </figure>
       <div>
         <h3>下班後的一人 AI 行銷團隊</h3>
@@ -591,7 +592,7 @@ a.pic:hover .im{transform:translateY(-5px) rotate(-1deg);border-color:var(--gree
 
   <!-- 結尾 -->
   <footer class="outro">
-    <img class="logo rv" src="img/brand-full.png" alt="花君行銷 hana kun 標誌" width="700" height="639" loading="lazy">
+    <img class="logo rv" src="img/brand-full.png" alt="花君行銷 hana kun 標誌" width="428" height="749" loading="lazy">
     <div class="en">let's work together!</div>
     <h2>想聊聊您的品牌嗎？</h2>
     <p>現在就免費健檢，打造您的專屬社群</p>
