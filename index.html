@@ -71,13 +71,14 @@ h1,h2,h3,h4{text-wrap:balance}
 .nav a.lk:hover::after,.nav a.lk.on::after{transform:scaleX(1)}
 .nav .price-jump{font-family:var(--display);font-weight:700;font-size:15px;text-decoration:none;color:#FFFFFF;background:var(--green);border-radius:999px;padding:4px 14px;white-space:nowrap;transition:background .25s}
 .nav .price-jump:hover{background:var(--red)}
-.menu-btn{display:none;flex:none;width:40px;height:40px;border:2px solid var(--green);border-radius:12px;background:var(--card);padding:0;cursor:pointer;flex-direction:column;align-items:center;justify-content:center;gap:4px}
+.menu-btn{display:flex;flex:none;width:40px;height:40px;border:2px solid var(--green);border-radius:12px;background:var(--card);padding:0;cursor:pointer;flex-direction:column;align-items:center;justify-content:center;gap:4px}
 .menu-btn span{display:block;width:18px;height:2px;border-radius:2px;background:var(--green);transition:transform .25s,opacity .2s}
 .nav.menu-open .menu-btn span:nth-child(1){transform:translateY(6px) rotate(45deg)}
 .nav.menu-open .menu-btn span:nth-child(2){opacity:0}
 .nav.menu-open .menu-btn span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
 .mmenu{position:absolute;left:16px;right:16px;top:calc(100% + 6px);background:var(--card);border:2px solid var(--green);border-radius:18px;padding:8px;display:grid;grid-template-columns:1fr 1fr;gap:6px;box-shadow:0 14px 28px -16px rgba(34,99,46,.5)}
 .mmenu[hidden]{display:none}
+@media (min-width:761px){.mmenu{left:auto;right:max(16px,calc((100% - 1080px)/2));width:360px}}
 .mmenu a{display:block;text-align:center;text-decoration:none;color:var(--green);font-weight:500;padding:10px 6px;border-radius:12px;background:var(--paper)}
 .mmenu a:active,.mmenu a:hover{background:var(--tint)}
 
@@ -211,15 +212,13 @@ a.pic:hover .im{transform:translateY(-5px) rotate(-1deg);border-color:var(--gree
 .btn[aria-disabled="true"]{opacity:.45;pointer-events:none}
 .cartbar{position:fixed;left:50%;bottom:14px;translate:-50% 0;z-index:30;display:flex;align-items:center;gap:12px;background:var(--green);color:#FFFFFF;border-radius:999px;padding:8px 8px 8px 20px;box-shadow:0 10px 24px -10px rgba(0,0,0,.4);max-width:calc(100% - 24px);transition:opacity .25s,transform .3s}
 .cartbar[hidden]{display:none}
-.fabs{position:fixed;right:16px;bottom:16px;z-index:31;display:flex;flex-direction:column;align-items:flex-end;gap:10px;transition:bottom .3s}
+.fabs{position:fixed;right:16px;bottom:16px;z-index:31;display:flex;flex-direction:column;align-items:flex-end;gap:8px;transition:bottom .3s}
 .fab{display:flex;align-items:center;gap:6px;background:var(--red);color:#FFFFFF;text-decoration:none;border-radius:999px;padding:12px 18px 12px 14px;font-family:var(--display);font-weight:700;font-size:16px;box-shadow:0 10px 24px -10px rgba(0,0,0,.45);transition:bottom .3s,transform .2s}
 .fab:hover{transform:translateY(-2px)}
 .fab svg{width:24px;height:24px;flex:none}
 .cartbar:not([hidden]) ~ .fabs{bottom:76px}
-.totop{width:48px;height:48px;border-radius:50%;display:grid;place-items:center;background:#FFFFFF;color:var(--green);border:2px solid var(--green);text-decoration:none;box-shadow:0 8px 20px -10px rgba(0,0,0,.4);opacity:0;pointer-events:none;transition:opacity .25s,transform .2s}
-.totop.show{opacity:1;pointer-events:auto}
-.totop:hover{transform:translateY(-2px)}
-.totop svg{width:22px;height:22px}
+.fq{display:block;text-align:center;min-width:7.4em;background:#FFFFFF;color:var(--green);border:2px solid var(--green);border-radius:999px;padding:6px 14px;font-family:var(--display);font-weight:700;font-size:14px;text-decoration:none;white-space:nowrap;box-shadow:0 8px 20px -12px rgba(0,0,0,.45);transition:transform .2s,background .2s,color .2s}
+.fq:hover{background:var(--green);color:#FFFFFF;transform:translateY(-2px)}
 .cartbar span{font-size:14px;white-space:nowrap;flex:none}
 .cartbar a{flex:none;background:var(--red);color:#FFFFFF;text-decoration:none;border-radius:999px;padding:6px 16px;font-family:var(--display);font-weight:700;font-size:15px}
 .dm{position:fixed;inset:0;z-index:50;background:rgba(30,40,32,.45);display:grid;place-items:center;padding:16px}
@@ -354,7 +353,6 @@ a.pic:hover .im{transform:translateY(-5px) rotate(-1deg);border-color:var(--gree
   body{font-size:15px}
   .nav ul{gap:10px;font-size:14px}
   .nav .price-jump{font-size:14px;padding:4px 12px}
-  .nav .brand span{display:none}
   .quick b{font-size:17px}
   .g2{grid-template-columns:1fr}
   .nav .brand span{font-size:17px}
@@ -378,14 +376,6 @@ a.pic:hover .im{transform:translateY(-5px) rotate(-1deg);border-color:var(--gree
 <nav class="nav" id="nav">
   <div class="wrap">
     <a class="brand" href="#top"><img src="img/logo-mark.png" alt="" width="38" height="40"><span>花君行銷</span></a>
-    <ul>
-      <li><a class="lk" href="#check">免費健檢</a></li>
-      <li><a class="lk" href="#cases">成功案例</a></li>
-      <li class="ex"><a class="lk" href="#about">為什麼找花君</a></li>
-      <li class="ex"><a class="lk" href="#flow">合作流程</a></li>
-      <li class="ex"><a class="lk" href="#faq">常見問題</a></li>
-    </ul>
-    <a class="price-jump" href="#pricing">價格一覽</a>
     <button type="button" class="menu-btn" id="menuBtn" aria-label="開啟選單" aria-expanded="false" aria-controls="mmenu"><span></span><span></span><span></span></button>
   </div>
   <div class="mmenu" id="mmenu" hidden>
@@ -670,7 +660,7 @@ a.pic:hover .im{transform:translateY(-5px) rotate(-1deg);border-color:var(--gree
   <ol><li>按下「前往 IG 私訊」</li><li>在訊息框貼上（電腦按 Ctrl＋V，手機長按選「貼上」）</li><li>送出，花君就會收到您選的方案</li></ol>
   <div class="row"><a class="btn main" id="dmGo" href="https://ig.me/m/hanakun.mkt" target="_blank" rel="noopener">前往 IG 私訊</a><button type="button" class="x" id="dmX">返回修改</button></div>
 </div></div>
-<div class="fabs"><a class="totop" id="totop" href="#top" aria-label="回到最上面"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 14l6-6 6 6"/></svg></a><a class="fab" href="https://ig.me/m/hanakun.mkt" target="_blank" rel="noopener" aria-label="IG 私訊花君行銷"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>私訊</a></div>
+<div class="fabs"><a class="fq" id="totop" href="#top">回到首頁</a><a class="fq" href="#cases">看成功案例</a><a class="fq" href="#pricing">看價格</a><a class="fab" href="https://ig.me/m/hanakun.mkt" target="_blank" rel="noopener" aria-label="IG 私訊花君行銷"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>私訊</a></div>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <script>
@@ -765,6 +755,6 @@ a.pic:hover .im{transform:translateY(-5px) rotate(-1deg);border-color:var(--gree
   addEventListener('resize',function(){ if(innerWidth>760) set(false); });
 })();
 </script>
-<script>(function(){var t=document.getElementById("totop");function f(){t.classList.toggle("show",scrollY>innerHeight*0.8)}addEventListener("scroll",f,{passive:true});f();t.addEventListener("click",function(e){e.preventDefault();scrollTo({top:0,behavior:"smooth"});});})();</script>
+<script>(function(){var t=document.getElementById("totop");t.addEventListener("click",function(e){e.preventDefault();scrollTo({top:0,behavior:"smooth"});});})();</script>
 </body>
 </html>
