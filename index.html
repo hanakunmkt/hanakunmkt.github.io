@@ -9,7 +9,7 @@
 <link rel="icon" href="img/favicon.png">
 <meta property="og:type" content="website">
 <meta property="og:title" content="花君行銷｜一人 AI 行銷團隊">
-<meta property="og:description" content="社群代營運、短影音、SEO／GEO 文章。私訊 IG 免費健檢。">
+<meta property="og:description" content="社群代營運、短影音、SEO／GEO 文章。填表申請免費健檢。">
 <meta property="og:image" content="https://hanakunmkt.github.io/img/og.png">
 <meta property="og:url" content="https://hanakunmkt.github.io/">
 <meta name="theme-color" content="#FFFFFF">
@@ -185,52 +185,13 @@ a.pic:hover .im{transform:translateY(-5px) rotate(-1deg);border-color:var(--gree
 .case-head{margin-bottom:12px}
 
 /* 方案選擇 */
-.pick{cursor:pointer;position:relative;transition:transform .35s var(--pop),border-color .2s,box-shadow .3s,background .2s}
-.pick .add{display:inline-flex;align-items:center;gap:4px;font-size:15px;font-weight:700;color:#FFFFFF;background:var(--red);border:2px solid var(--red);border-radius:999px;padding:4px 16px;white-space:nowrap;box-shadow:0 3px 0 -1px #8E2219;transition:transform .3s var(--pop)}
-.pick:hover .add{transform:translateY(-2px) scale(1.05)}
-.pick .add::before{content:"＋"}
-.pick[aria-pressed="true"] .add{background:var(--green);border-color:var(--green);color:#FFFFFF;box-shadow:0 3px 0 -1px #123A1B}
-.pick[aria-pressed="true"] .add::before{content:"✓"}
-.tier.pick[aria-pressed="true"]{border:2px solid var(--red);background:#FFFFFF}
-.tier .add{position:absolute;right:14px;top:16px}
-.mini tr.pick td{padding:9px 6px}
-.mini tr.pick:hover td{background:var(--tint)}
-.mini tr.pick[aria-pressed="true"] td{background:#FBE9E4}
-.mini tr.pick td:first-child{display:flex;align-items:center;gap:10px}
-.check-pick{justify-self:start}
-.check-pick .add{font-size:18px;padding:8px 24px;font-family:var(--display)}
-.th-pick{border:0;cursor:pointer}
-.th-pick[aria-pressed="true"]{background:var(--green);box-shadow:0 6px 0 -1px #123A1B}
-.cart{margin-top:26px;border:2px solid var(--green);border-radius:22px;background:var(--card);padding:18px 22px;display:grid;gap:10px}
-.cart h3{margin:0;font-family:var(--display);font-weight:700;color:var(--green);font-size:22px}
-.cart .msg{background:#FFFFFF;border:1.5px dashed var(--line);border-radius:14px;padding:10px 14px;margin:0;color:var(--text)}
-.cart .msg.empty{color:var(--muted)}
-.cart .row{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center}
-.cart .clear{background:none;border:0;color:var(--muted);text-decoration:underline;cursor:pointer;font:inherit;font-size:14px}
-.cart .hint{font-size:13px;color:var(--muted);margin:0}
-.btnreset{background:none;border:0;padding:0;font:inherit;cursor:pointer}
 .btn[aria-disabled="true"]{opacity:.45;pointer-events:none}
-.cartbar{position:fixed;left:50%;bottom:14px;translate:-50% 0;z-index:30;display:flex;align-items:center;gap:12px;background:var(--green);color:#FFFFFF;border-radius:999px;padding:8px 8px 8px 20px;box-shadow:0 10px 24px -10px rgba(0,0,0,.4);max-width:calc(100% - 24px);transition:opacity .25s,transform .3s}
-.cartbar[hidden]{display:none}
 .fabs{position:fixed;right:16px;bottom:16px;z-index:31;display:flex;flex-direction:column;align-items:flex-end;gap:8px;transition:bottom .3s}
 .fab{display:flex;align-items:center;gap:6px;background:var(--red);color:#FFFFFF;text-decoration:none;border-radius:999px;padding:12px 18px 12px 14px;font-family:var(--display);font-weight:700;font-size:16px;box-shadow:0 10px 24px -10px rgba(0,0,0,.45);transition:bottom .3s,transform .2s}
 .fab:hover{transform:translateY(-2px)}
 .fab svg{width:24px;height:24px;flex:none}
-.cartbar:not([hidden]) ~ .fabs{bottom:76px}
 .fq{display:block;text-align:center;min-width:7.4em;background:#FFFFFF;color:var(--green);border:2px solid var(--green);border-radius:999px;padding:6px 14px;font-family:var(--display);font-weight:700;font-size:14px;text-decoration:none;white-space:nowrap;box-shadow:0 8px 20px -12px rgba(0,0,0,.45);transition:transform .2s,background .2s,color .2s}
 .fq:hover{background:var(--green);color:#FFFFFF;transform:translateY(-2px)}
-.cartbar span{font-size:14px;white-space:nowrap;flex:none}
-.cartbar a{flex:none;background:var(--red);color:#FFFFFF;text-decoration:none;border-radius:999px;padding:6px 16px;font-family:var(--display);font-weight:700;font-size:15px}
-.dm{position:fixed;inset:0;z-index:50;background:rgba(30,40,32,.45);display:grid;place-items:center;padding:16px}
-.dm[hidden]{display:none}
-.dm .box{background:var(--paper);border:2px solid var(--green);border-radius:22px;padding:22px;max-width:460px;width:100%;display:grid;gap:12px}
-.dm h3{margin:0;font-family:var(--display);color:var(--green);font-size:22px}
-.dm .msg{background:#FFFFFF;border:1.5px dashed var(--line);border-radius:14px;padding:10px 14px;margin:0}
-.dm ol{margin:0;padding-left:1.3em;font-size:15px}
-.dm .row{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center}
-.dm .x{background:none;border:0;color:var(--muted);text-decoration:underline;cursor:pointer;font:inherit;font-size:14px}
-.toast{position:fixed;left:50%;top:76px;translate:-50% 0;z-index:40;background:var(--text);color:#FFFFFF;border-radius:12px;padding:10px 16px;font-size:14px;max-width:calc(100% - 32px);text-align:center;opacity:0;pointer-events:none;transition:opacity .3s}
-.toast.on{opacity:1}
 
 
 /* 收合 */
@@ -271,6 +232,8 @@ a.pic:hover .im{transform:translateY(-5px) rotate(-1deg);border-color:var(--gree
 .fine{font-size:14px;color:var(--muted);margin:0}
 .addon{text-align:center;margin:22px 0 0;font-size:15px}
 .addon b{color:var(--green)}
+.ask{text-align:center;margin-top:18px}
+.check-go{justify-self:start}
 
 /* 關於 */
 .about{display:grid;grid-template-columns:240px 1fr;gap:30px;align-items:center}
@@ -392,7 +355,7 @@ a.pic:hover .im{transform:translateY(-5px) rotate(-1deg);border-color:var(--gree
       <h1>品牌社群經營<br>讓<em>花君行銷</em>幫您</h1>
       <p class="sub">忙到沒時間發文、影片拍了沒空剪、官網上網搜尋找不到？<br><b>社群</b>、<b>短影音</b>、<b>SEO 文章</b>交給花君，您專心顧好生意就好。</p>
       <div class="ctas">
-        <a class="btn main" href="https://ig.me/m/hanakun.mkt" target="_blank" rel="noopener">私訊 IG 免費健檢</a>
+        <a class="btn main" href="https://docs.google.com/forms/d/e/1FAIpQLSefFn42wXHG_5L1AD6yZhtWxH4H29DcEFuDZD-j2UNt3qdkSw/viewform" target="_blank" rel="noopener">填表申請免費健檢</a>
       </div>
       <nav class="quick" aria-label="快速切換">
         <a class="hot" href="#check"><b>免費健檢</b><span>每月限 5 位</span></a>
@@ -497,7 +460,7 @@ a.pic:hover .im{transform:translateY(-5px) rotate(-1deg);border-color:var(--gree
           <figure class="pic"><span class="im"><img src="img/th-bags-result.jpg" alt="紙袋回收活動收到的大量紙袋" width="500" height="888" loading="lazy" style="object-position:50% 40%"></span><figcaption class="t">紙袋回收活動收到的紙袋</figcaption></figure>
           <div class="addon-box">
             <p><b>Threads 也想有人顧？</b>Threads 小編代營運可以另外加購，私訊告訴我您的需求，再依需求報價。</p>
-            <button type="button" class="btn main pick th-pick" aria-pressed="false" data-item="Threads 小編代營運（另外報價）">我想要 Threads</button>
+            <a class="btn main" href="https://ig.me/m/hanakun.mkt" target="_blank" rel="noopener">我想要 Threads</a>
           </div>
         </div>
       </article>
@@ -514,7 +477,7 @@ a.pic:hover .im{transform:translateY(-5px) rotate(-1deg);border-color:var(--gree
         <span class="seal" aria-hidden="true">君</span>
         <h3><span class="no">01</span>入門健檢</h3>
         <div class="price">免費<small>每月限 5 位</small></div>
-        <button type="button" class="pick check-pick btnreset" data-item="免費健檢" aria-pressed="false"><span class="add" data-on="已加入免費健檢" data-off="加入免費健檢">加入免費健檢</span></button>
+        <a class="btn main check-go" href="https://docs.google.com/forms/d/e/1FAIpQLSefFn42wXHG_5L1AD6yZhtWxH4H29DcEFuDZD-j2UNt3qdkSw/viewform" target="_blank" rel="noopener">填表申請免費健檢</a>
         <ul class="ticks">
           <li>幫您找出 IG 或 FB 帳號（擇一）現在卡在哪裡</li>
           <li>填表後 3 個工作天內 IG 回覆您，約 15 分鐘 Google Meet 講解報告，會後加 LINE 官方帳號領取書面報告</li>
@@ -525,20 +488,17 @@ a.pic:hover .im{transform:translateY(-5px) rotate(-1deg);border-color:var(--gree
       <div class="frame wide rv">
         <h3><span class="no">02</span>社群代營運<small style="font-size:15px;color:var(--muted);font-family:var(--body);font-weight:400">月費</small></h3>
         <div class="tiers">
-          <div class="tier pick" role="button" tabindex="0" aria-pressed="false" data-group="social" data-item="社群代營運輕量方案（NT$6,000／月）">
-            <span class="add">加入</span>
+          <div class="tier">
             <h4>輕量</h4>
             <div class="price">NT$6,000<small>／月</small></div>
             <ul class="ticks"><li>6 篇圖文</li><li>企劃、文案、設計、排程</li><li>每篇可改 1 次</li></ul>
           </div>
-          <div class="tier pick" role="button" tabindex="0" aria-pressed="false" data-group="social" data-item="社群代營運標準方案（NT$10,000／月）">
-            <span class="add">加入</span>
+          <div class="tier">
             <h4>標準</h4>
             <div class="price">NT$10,000<small>／月</small></div>
             <ul class="ticks"><li>6 篇圖文＋2 支短影音</li><li>短影音含腳本＋剪輯</li><li>每篇可改 2 次</li></ul>
           </div>
-          <div class="tier pick" role="button" tabindex="0" aria-pressed="false" data-group="social" data-item="社群代營運重量方案（NT$15,000／月）">
-            <span class="add">加入</span>
+          <div class="tier">
             <h4>重量</h4>
             <div class="price">NT$15,000<small>／月</small></div>
             <ul class="ticks"><li>6 篇圖文＋4 支短影音</li><li>短影音含腳本＋剪輯</li><li>月底成效報告書</li><li>每篇可改 2 次</li></ul>
@@ -553,9 +513,9 @@ a.pic:hover .im{transform:translateY(-5px) rotate(-1deg);border-color:var(--gree
       <div class="frame rv">
         <h3><span class="no">03</span>短影音純剪輯</h3>
         <table class="mini">
-          <tr class="pick" role="button" tabindex="0" aria-pressed="false" data-item="短影音純剪輯 30 秒內（NT$1,000／支）"><td><span class="add">加入</span>30 秒內</td><td>NT$1,000／支</td></tr>
-          <tr class="pick" role="button" tabindex="0" aria-pressed="false" data-item="短影音純剪輯 31～60 秒（NT$1,200／支）"><td><span class="add">加入</span>31～60 秒</td><td>NT$1,200／支</td></tr>
-          <tr class="pick" role="button" tabindex="0" aria-pressed="false" data-item="短影音純剪輯 61～90 秒（NT$1,500／支）"><td><span class="add">加入</span>61～90 秒</td><td>NT$1,500／支</td></tr>
+          <tr><td>30 秒內</td><td>NT$1,000／支</td></tr>
+          <tr><td>31～60 秒</td><td>NT$1,200／支</td></tr>
+          <tr><td>61～90 秒</td><td>NT$1,500／支</td></tr>
         </table>
         <p class="fine">拍好了卻沒時間剪？給我素材，幫您剪成可以直接發的短影音（不含腳本和拍攝）。想連腳本一起處理，可以選社群代營運的標準或重量方案。</p>
       </div>
@@ -563,8 +523,8 @@ a.pic:hover .im{transform:translateY(-5px) rotate(-1deg);border-color:var(--gree
       <div class="frame rv" style="--d:.08s">
         <h3><span class="no">04</span>SEO／GEO 文章</h3>
         <table class="mini">
-          <tr class="pick" role="button" tabindex="0" aria-pressed="false" data-group="seo" data-item="SEO／GEO 文章單篇（NT$2,500／篇）"><td><span class="add">加入</span>單篇</td><td>NT$2,500／篇</td></tr>
-          <tr class="pick" role="button" tabindex="0" aria-pressed="false" data-group="seo" data-item="SEO／GEO 文章月包 5 篇（NT$10,000／月）"><td><span class="add">加入</span>月包 5 篇</td><td>NT$10,000／月</td></tr>
+          <tr><td>單篇</td><td>NT$2,500／篇</td></tr>
+          <tr><td>月包 5 篇</td><td>NT$10,000／月</td></tr>
         </table>
         <ul class="ticks">
           <li>每篇 1,500～2,000 字，含關鍵字研究、標題與描述、段落架構，文末加常見問題，讓 AI 搜尋也容易引用</li>
@@ -575,15 +535,7 @@ a.pic:hover .im{transform:translateY(-5px) rotate(-1deg);border-color:var(--gree
 
     </div>
     <p class="addon rv">三種服務可以<b>自由搭配</b>。</p>
-    <div class="cart rv" id="cart">
-      <h3>您選擇的方案</h3>
-      <p class="msg empty" id="cartMsg">點選上面的方案，就會出現在這裡。</p>
-      <div class="row">
-        <a class="btn main" id="cartGo" href="https://ig.me/m/hanakun.mkt" target="_blank" rel="noopener" aria-disabled="true">私訊花君</a>
-        <button type="button" class="clear" id="cartClear">清除選擇</button>
-      </div>
-      <p class="hint">按下「私訊花君」會幫您複製這段訊息，到 IG 私訊貼上就能送出。</p>
-    </div>
+    <div class="ask rv"><a class="btn main" href="https://ig.me/m/hanakun.mkt" target="_blank" rel="noopener">私訊詢問方案</a></div>
   </section>
 
   <!-- 關於花椰菜 -->
@@ -612,7 +564,7 @@ a.pic:hover .im{transform:translateY(-5px) rotate(-1deg);border-color:var(--gree
   <section class="sec" id="flow">
     <div class="sec-head rv"><span class="en">how it works</span><h2>合作流程</h2></div>
     <ol class="flow">
-      <li class="rv"><b>私訊 IG</b><span>傳訊息給 @hanakun.mkt，填健檢表單，3 個工作天內回覆您</span></li>
+      <li class="rv"><b>填健檢表單</b><span>點「填表申請免費健檢」填寫，3 個工作天內 IG 回覆您</span></li>
       <li class="rv" style="--d:.06s"><b>評估</b><span>先了解您的品牌和需求，確認幫得上忙</span></li>
       <li class="rv" style="--d:.12s"><b>免費健檢</b><span>約 15 分鐘 Google Meet 講解報告，會後加 LINE 官方帳號拿報告</span></li>
       <li class="rv" style="--d:.18s"><b>選方案</b><span>收到報告 7 天內決定，打 9 折</span></li>
@@ -643,7 +595,7 @@ a.pic:hover .im{transform:translateY(-5px) rotate(-1deg);border-color:var(--gree
     <div class="en">let's work together!</div>
     <h2>想聊聊您的品牌嗎？</h2>
     <p>現在就免費健檢，打造您的專屬社群</p>
-    <a class="btn main" href="https://ig.me/m/hanakun.mkt" target="_blank" rel="noopener">私訊 IG 免費健檢</a>
+    <a class="btn main" href="https://docs.google.com/forms/d/e/1FAIpQLSefFn42wXHG_5L1AD6yZhtWxH4H29DcEFuDZD-j2UNt3qdkSw/viewform" target="_blank" rel="noopener">填表申請免費健檢</a>
     <div class="contact">
       <a href="https://www.instagram.com/hanakun.mkt/" target="_blank" rel="noopener">Instagram @hanakun.mkt</a>
       <a href="https://www.threads.net/@hanakun.mkt" target="_blank" rel="noopener">Threads @hanakun.mkt</a>
@@ -653,15 +605,7 @@ a.pic:hover .im{transform:translateY(-5px) rotate(-1deg);border-color:var(--gree
     <p class="copy">© 2026 花君行銷 hana kun</p>
   </footer>
 </main>
-<div class="cartbar" id="cartbar" hidden><span id="cartbarTx"></span><a href="#cart">查看並私訊</a></div>
-<div class="dm" id="dm" hidden role="dialog" aria-modal="true" aria-labelledby="dmT"><div class="box">
-  <h3 id="dmT">訊息已幫您複製好了</h3>
-  <p class="msg" id="dmMsg"></p>
-  <ol><li>按下「前往 IG 私訊」</li><li>在訊息框貼上（電腦按 Ctrl＋V，手機長按選「貼上」）</li><li>送出，花君就會收到您選的方案</li></ol>
-  <div class="row"><a class="btn main" id="dmGo" href="https://ig.me/m/hanakun.mkt" target="_blank" rel="noopener">前往 IG 私訊</a><button type="button" class="x" id="dmX">返回修改</button></div>
-</div></div>
 <div class="fabs"><a class="fq" id="totop" href="#top">回到首頁</a><a class="fq" href="#cases">看成功案例</a><a class="fq" href="#pricing">看價格</a><a class="fab" href="https://ig.me/m/hanakun.mkt" target="_blank" rel="noopener" aria-label="IG 私訊花君行銷"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>私訊</a></div>
-<div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <script>
 (function(){
@@ -682,55 +626,6 @@ a.pic:hover .im{transform:translateY(-5px) rotate(-1deg);border-color:var(--gree
     es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
   },{rootMargin:'0px 0px -6% 0px',threshold:.06});
   document.querySelectorAll('.rv').forEach(function(el){ io.observe(el); });
-})();
-
-(function(){
-  var picks=[].slice.call(document.querySelectorAll('.pick'));
-  var msg=document.getElementById('cartMsg'),go=document.getElementById('cartGo'),bar=document.getElementById('cartbar'),barTx=document.getElementById('cartbarTx'),toast=document.getElementById('toast');
-  var text='';
-  function chosen(){return picks.filter(function(p){return p.getAttribute('aria-pressed')==='true';});}
-  function render(){
-    var c=chosen();
-    picks.forEach(function(p){var t=p.querySelector('.add'); var on=p.getAttribute('aria-pressed')==='true'; if(t) t.textContent=on?(t.dataset.on||'已選'):(t.dataset.off||'加入'); if(p.classList.contains('th-pick')) p.textContent=on?'✓ 已加入 Threads':'我想要 Threads';});
-    if(!c.length){text='';msg.textContent='點選上面的方案，就會出現在這裡。';msg.classList.add('empty');go.setAttribute('aria-disabled','true');bar.hidden=true;return;}
-    text='我對花君行銷有興趣！我想要：'+c.map(function(p){return p.dataset.item;}).join('＋');
-    msg.textContent=text;msg.classList.remove('empty');go.removeAttribute('aria-disabled');
-    barTx.textContent='已選 '+c.length+' 項';bar.hidden=false;
-  }
-  function toggle(p){
-    var on=p.getAttribute('aria-pressed')!=='true';
-    if(on&&p.dataset.group){picks.forEach(function(q){if(q!==p&&q.dataset.group===p.dataset.group)q.setAttribute('aria-pressed','false');});}
-    p.setAttribute('aria-pressed',on?'true':'false');render();
-  }
-  picks.forEach(function(p){
-    p.addEventListener('click',function(){toggle(p);});
-    p.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();toggle(p);}});
-  });
-  document.getElementById('cartClear').addEventListener('click',function(){picks.forEach(function(p){p.setAttribute('aria-pressed','false');});render();});
-  function copy(t){
-    function legacy(){
-    var ta=document.createElement('textarea');ta.value=t;ta.setAttribute('readonly','');ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.select();
-    try{document.execCommand('copy');}catch(e){} document.body.removeChild(ta);
-    }
-    legacy();
-    try{ if(navigator.clipboard&&window.isSecureContext) navigator.clipboard.writeText(t).catch(function(){}); }catch(e){}
-  }
-  var dm=document.getElementById('dm'),dmGo=document.getElementById('dmGo');
-  go.addEventListener('click',function(e){
-    e.preventDefault();
-    if(!text) return;
-    copy(text);
-    document.getElementById('dmMsg').textContent=text;
-    dmGo.href='https://ig.me/m/hanakun.mkt?text='+encodeURIComponent(text);
-    dm.hidden=false; dmGo.focus();
-  });
-  dmGo.addEventListener('click',function(){ copy(text); setTimeout(function(){dm.hidden=true;},300); });
-  document.getElementById('dmX').addEventListener('click',function(){dm.hidden=true;});
-  dm.addEventListener('click',function(e){ if(e.target===dm) dm.hidden=true; });
-  var cart=document.getElementById('cart');
-  if('IntersectionObserver' in window){
-    new IntersectionObserver(function(es){ es.forEach(function(e){ bar.style.opacity=e.isIntersecting?'0':''; bar.style.pointerEvents=e.isIntersecting?'none':''; }); }).observe(cart);
-  }
 })();
 
 (function(){
