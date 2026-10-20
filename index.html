@@ -211,10 +211,15 @@ a.pic:hover .im{transform:translateY(-5px) rotate(-1deg);border-color:var(--gree
 .btn[aria-disabled="true"]{opacity:.45;pointer-events:none}
 .cartbar{position:fixed;left:50%;bottom:14px;translate:-50% 0;z-index:30;display:flex;align-items:center;gap:12px;background:var(--green);color:#FFFFFF;border-radius:999px;padding:8px 8px 8px 20px;box-shadow:0 10px 24px -10px rgba(0,0,0,.4);max-width:calc(100% - 24px);transition:opacity .25s,transform .3s}
 .cartbar[hidden]{display:none}
-.fab{position:fixed;right:16px;bottom:16px;z-index:31;display:flex;align-items:center;gap:6px;background:var(--red);color:#FFFFFF;text-decoration:none;border-radius:999px;padding:12px 18px 12px 14px;font-family:var(--display);font-weight:700;font-size:16px;box-shadow:0 10px 24px -10px rgba(0,0,0,.45);transition:bottom .3s,transform .2s}
+.fabs{position:fixed;right:16px;bottom:16px;z-index:31;display:flex;flex-direction:column;align-items:flex-end;gap:10px;transition:bottom .3s}
+.fab{display:flex;align-items:center;gap:6px;background:var(--red);color:#FFFFFF;text-decoration:none;border-radius:999px;padding:12px 18px 12px 14px;font-family:var(--display);font-weight:700;font-size:16px;box-shadow:0 10px 24px -10px rgba(0,0,0,.45);transition:bottom .3s,transform .2s}
 .fab:hover{transform:translateY(-2px)}
 .fab svg{width:24px;height:24px;flex:none}
-.cartbar:not([hidden]) ~ .fab{bottom:76px}
+.cartbar:not([hidden]) ~ .fabs{bottom:76px}
+.totop{width:48px;height:48px;border-radius:50%;display:grid;place-items:center;background:#FFFFFF;color:var(--green);border:2px solid var(--green);text-decoration:none;box-shadow:0 8px 20px -10px rgba(0,0,0,.4);opacity:0;pointer-events:none;transition:opacity .25s,transform .2s}
+.totop.show{opacity:1;pointer-events:auto}
+.totop:hover{transform:translateY(-2px)}
+.totop svg{width:22px;height:22px}
 .cartbar span{font-size:14px;white-space:nowrap;flex:none}
 .cartbar a{flex:none;background:var(--red);color:#FFFFFF;text-decoration:none;border-radius:999px;padding:6px 16px;font-family:var(--display);font-weight:700;font-size:15px}
 .dm{position:fixed;inset:0;z-index:50;background:rgba(30,40,32,.45);display:grid;place-items:center;padding:16px}
@@ -393,8 +398,8 @@ a.pic:hover .im{transform:translateY(-5px) rotate(-1deg);border-color:var(--gree
   <header class="hero">
     <div>
       <p class="eyebrow">hana kun marketing</p>
-      <h1>品牌社群經營<br>讓<em>花君行銷</em>幫你</h1>
-      <p class="sub">忙到沒時間發文、影片拍了沒空剪、官網上網搜尋找不到？<br><b>社群</b>、<b>短影音</b>、<b>SEO 文章</b>交給花君，你專心顧好生意就好。</p>
+      <h1>品牌社群經營<br>讓<em>花君行銷</em>幫您</h1>
+      <p class="sub">忙到沒時間發文、影片拍了沒空剪、官網上網搜尋找不到？<br><b>社群</b>、<b>短影音</b>、<b>SEO 文章</b>交給花君，您專心顧好生意就好。</p>
       <div class="ctas">
         <a class="btn main" href="https://ig.me/m/hanakun.mkt" target="_blank" rel="noopener">私訊 IG 免費健檢</a>
       </div>
@@ -410,8 +415,8 @@ a.pic:hover .im{transform:translateY(-5px) rotate(-1deg);border-color:var(--gree
   </header>
 
   <!-- 成功案例 -->
-  <section class="sec fold" id="cases">
-    <div class="sec-head rv fold-h" role="button" tabindex="0" aria-expanded="false"><span class="en">results</span><h2>成功案例</h2><p class="fold-hint">點標題展開看所有案例</p></div>
+  <section class="sec fold open" id="cases">
+    <div class="sec-head rv fold-h" role="button" tabindex="0" aria-expanded="true"><span class="en">results</span><h2>成功案例</h2><p class="fold-hint">點標題展開看所有案例</p></div>
     <div class="cases">
 
       <article class="frame case rv">
@@ -419,7 +424,7 @@ a.pic:hover .im{transform:translateY(-5px) rotate(-1deg);border-color:var(--gree
         <header class="case-head"><span class="tag">社群｜會員活動</span><h3>痛點：會員不夠多、回購率太低</h3></header>
         <ol class="story">
           <li class="st"><span class="lb">問題</span><p>有辦會員活動，但沒什麼人記得，也沒帶動加入和回購。</p></li>
-          <li class="st"><span class="lb">做法</span><p>研究競品的會員制度，把會員日包裝成有記憶點的主題活動；實體活動現場再搭配「加入會員＋分享抽獎」，讓客人順手幫你曝光。</p></li>
+          <li class="st"><span class="lb">做法</span><p>研究競品的會員制度，把會員日包裝成有記憶點的主題活動；實體活動現場再搭配「加入會員＋分享抽獎」，讓客人順手幫您曝光。</p></li>
           <li class="st res"><span class="lb">成果</span><div class="big">+51<small>%</small></div><div class="cap">會員數比去年同期成長</div><p>會員數比去年同期多 51%，主題活動的廣告 ROAS 也比一般圖文高 2～3%。</p></li>
         </ol>
         <div class="gallery g2">
@@ -469,7 +474,7 @@ a.pic:hover .im{transform:translateY(-5px) rotate(-1deg);border-color:var(--gree
         <ol class="story">
           <li class="st"><span class="lb">問題</span><p>圖文很難把品牌的故事講清楚，客人對品牌沒感覺。</p></li>
           <li class="st"><span class="lb">做法</span><p>從企劃、腳本到剪輯、文案一次做完，依目的拍成不同類型的影片。</p></li>
-          <li class="st res"><span class="lb">成果</span><div class="big">多種<small>影片類型</small></div><div class="cap">品牌故事、議題討論、時事內容</div><p>品牌故事讓客人認同你，議題討論帶動留言，時事內容搭上話題增加觸及。</p></li>
+          <li class="st res"><span class="lb">成果</span><div class="big">多種<small>影片類型</small></div><div class="cap">品牌故事、議題討論、時事內容</div><p>品牌故事讓客人認同您，議題討論帶動留言，時事內容搭上話題增加觸及。</p></li>
         </ol>
         <div class="gallery g3 reels">
           <p class="gh">實際影片</p>
@@ -500,7 +505,7 @@ a.pic:hover .im{transform:translateY(-5px) rotate(-1deg);border-color:var(--gree
           <figure class="pic"><span class="im"><img src="img/threads-100w.jpg" alt="Threads 30 天摘要，瀏覽次數 100.1 萬" width="700" height="649" loading="lazy" style="object-fit:contain"></span><figcaption class="t">Threads 後台：30 天瀏覽 100.1 萬</figcaption></figure>
           <figure class="pic"><span class="im"><img src="img/th-bags-result.jpg" alt="紙袋回收活動收到的大量紙袋" width="500" height="888" loading="lazy" style="object-position:50% 40%"></span><figcaption class="t">紙袋回收活動收到的紙袋</figcaption></figure>
           <div class="addon-box">
-            <p><b>Threads 也想有人顧？</b>Threads 小編代營運可以另外加購，私訊告訴我你的需求，再依需求報價。</p>
+            <p><b>Threads 也想有人顧？</b>Threads 小編代營運可以另外加購，私訊告訴我您的需求，再依需求報價。</p>
             <button type="button" class="btn main pick th-pick" aria-pressed="false" data-item="Threads 小編代營運（另外報價）">我想要 Threads</button>
           </div>
         </div>
@@ -510,8 +515,8 @@ a.pic:hover .im{transform:translateY(-5px) rotate(-1deg);border-color:var(--gree
   </section>
 
   <!-- 服務與價格 -->
-  <section class="sec fold" id="pricing">
-    <div class="sec-head rv fold-h" role="button" tabindex="0" aria-expanded="false"><span class="en">services &amp; pricing</span><h2>服務與價格</h2><p class="fold-hint">點標題展開看所有方案與價格</p></div>
+  <section class="sec fold open" id="pricing">
+    <div class="sec-head rv fold-h" role="button" tabindex="0" aria-expanded="true"><span class="en">services &amp; pricing</span><h2>服務與價格</h2><p class="fold-hint">點標題展開看所有方案與價格</p></div>
     <div class="svc">
 
       <div class="frame wide rv" id="check" style="scroll-margin-top:80px">
@@ -520,8 +525,8 @@ a.pic:hover .im{transform:translateY(-5px) rotate(-1deg);border-color:var(--gree
         <div class="price">免費<small>每月限 5 位</small></div>
         <button type="button" class="pick check-pick btnreset" data-item="免費健檢" aria-pressed="false"><span class="add" data-on="已加入免費健檢" data-off="加入免費健檢">加入免費健檢</span></button>
         <ul class="ticks">
-          <li>幫你找出 IG 或 FB 帳號（擇一）現在卡在哪裡</li>
-          <li>填表後 3 個工作天內 IG 回覆你，約 15 分鐘 Google Meet 講解報告，會後加 LINE 官方帳號領取書面報告</li>
+          <li>幫您找出 IG 或 FB 帳號（擇一）現在卡在哪裡</li>
+          <li>填表後 3 個工作天內 IG 回覆您，約 15 分鐘 Google Meet 講解報告，會後加 LINE 官方帳號領取書面報告</li>
           <li>收到報告 7 天內決定合作，任一方案打 9 折</li>
         </ul>
       </div>
@@ -561,7 +566,7 @@ a.pic:hover .im{transform:translateY(-5px) rotate(-1deg);border-color:var(--gree
           <tr class="pick" role="button" tabindex="0" aria-pressed="false" data-item="短影音純剪輯 31～60 秒（NT$1,200／支）"><td><span class="add">加入</span>31～60 秒</td><td>NT$1,200／支</td></tr>
           <tr class="pick" role="button" tabindex="0" aria-pressed="false" data-item="短影音純剪輯 61～90 秒（NT$1,500／支）"><td><span class="add">加入</span>61～90 秒</td><td>NT$1,500／支</td></tr>
         </table>
-        <p class="fine">拍好了卻沒時間剪？給我素材，幫你剪成可以直接發的短影音（不含腳本和拍攝）。想連腳本一起處理，可以選社群代營運的標準或重量方案。</p>
+        <p class="fine">拍好了卻沒時間剪？給我素材，幫您剪成可以直接發的短影音（不含腳本和拍攝）。想連腳本一起處理，可以選社群代營運的標準或重量方案。</p>
       </div>
 
       <div class="frame rv" style="--d:.08s">
@@ -573,7 +578,7 @@ a.pic:hover .im{transform:translateY(-5px) rotate(-1deg);border-color:var(--gree
         <ul class="ticks">
           <li>每篇 1,500～2,000 字，含關鍵字研究、標題與描述、段落架構，文末加常見問題，讓 AI 搜尋也容易引用</li>
           <li>每篇附 3 張圖，交稿後 7 天內可改 2 次</li>
-          <li>月包幫你整理品牌專屬選題，也代你上稿，不用自己動手</li>
+          <li>月包幫您整理品牌專屬選題，也代您上稿，不用自己動手</li>
         </ul>
       </div>
 
@@ -600,7 +605,7 @@ a.pic:hover .im{transform:translateY(-5px) rotate(-1deg);border-color:var(--gree
       <div>
         <h3>不用請一整個行銷團隊</h3>
         <p>小品牌常常是老闆自己顧社群，一忙起來就停更，影片拍了沒空剪，文章也沒人寫。</p>
-        <p>花君把企劃、文案、設計、短影音和 SEO 文章整合在一起，搭配 AI 工具加快流程，讓你用小品牌負擔得起的預算，穩定產出內容。</p>
+        <p>花君把企劃、文案、設計、短影音和 SEO 文章整合在一起，搭配 AI 工具加快流程，讓您用小品牌負擔得起的預算，穩定產出內容。</p>
         <div class="skills">
           <span class="chip">社群企劃</span><span class="chip">文案</span><span class="chip">短影音腳本＋剪輯</span><span class="chip">SEO／GEO</span><span class="chip">活動企劃</span><span class="chip">AI 工作流程</span>
         </div>
@@ -612,8 +617,8 @@ a.pic:hover .im{transform:translateY(-5px) rotate(-1deg);border-color:var(--gree
   <section class="sec" id="flow">
     <div class="sec-head rv"><span class="en">how it works</span><h2>合作流程</h2></div>
     <ol class="flow">
-      <li class="rv"><b>私訊 IG</b><span>傳訊息給 @hanakun.mkt，填健檢表單，3 個工作天內回覆你</span></li>
-      <li class="rv" style="--d:.06s"><b>評估</b><span>先了解你的品牌和需求，確認幫得上忙</span></li>
+      <li class="rv"><b>私訊 IG</b><span>傳訊息給 @hanakun.mkt，填健檢表單，3 個工作天內回覆您</span></li>
+      <li class="rv" style="--d:.06s"><b>評估</b><span>先了解您的品牌和需求，確認幫得上忙</span></li>
       <li class="rv" style="--d:.12s"><b>免費健檢</b><span>約 15 分鐘 Google Meet 講解報告，會後加 LINE 官方帳號拿報告</span></li>
       <li class="rv" style="--d:.18s"><b>選方案</b><span>收到報告 7 天內決定，打 9 折</span></li>
       <li class="rv" style="--d:.24s"><b>開始合作</b><span>每月開一次企劃會議，月中排好下個月內容</span></li>
@@ -631,6 +636,9 @@ a.pic:hover .im{transform:translateY(-5px) rotate(-1deg);border-color:var(--gree
       <details class="rv"><summary>請問可以接急件嗎？</summary><p>交件時間少於 3 個工作天視為急件，會依當時檔期評估是否能承接，若可承接，每件酌收 NT$1,000。</p></details>
       <details class="rv"><summary>影片素材需要什麼時候提供呢？</summary><p>麻煩您於預定發布日前 5 個工作天提供素材。若素材晚到，該支影片將順延 3 個工作天發布，圖文則照常進行；可連續順延，但不跨月，若至月底仍未收到素材，該支影片將取消並減免 NT$1,000。</p></details>
       <details class="rv"><summary>服務有包含拍攝、回覆留言與私訊嗎？</summary><p>社群代營運不包含拍攝，也不包含回覆留言與私訊，素材需麻煩您提供，敬請見諒。</p></details>
+      <details class="rv"><summary>請問有包含廣告投放嗎？</summary><p>目前所有方案皆不包含廣告投放，廣告預算與投放設定需由您另外安排，敬請見諒。</p></details>
+      <details class="rv"><summary>只想經營 IG 或 FB 其中一個平台可以嗎？</summary><p>可以的。社群代營運也能只經營單一平台，方案內容與費用和兩個平台相同。</p></details>
+      <details class="rv"><summary>我的品牌不是寵物產業，也適用嗎？</summary><p>適用的。成功案例來自寵物品牌，但同樣的做法適用各種品牌，健檢時會依您的產業與客群調整方向。</p></details>
     </div>
   </section>
 
@@ -638,8 +646,8 @@ a.pic:hover .im{transform:translateY(-5px) rotate(-1deg);border-color:var(--gree
   <footer class="outro">
     <img class="logo rv" src="img/logo-full.png" alt="花君行銷 hana kun 標誌" width="600" height="875" loading="lazy">
     <div class="en">let's work together!</div>
-    <h2>想聊聊你的品牌嗎？</h2>
-    <p>現在就免費健檢，打造你的專屬社群</p>
+    <h2>想聊聊您的品牌嗎？</h2>
+    <p>現在就免費健檢，打造您的專屬社群</p>
     <a class="btn main" href="https://ig.me/m/hanakun.mkt" target="_blank" rel="noopener">私訊 IG 免費健檢</a>
     <div class="contact">
       <a href="https://www.instagram.com/hanakun.mkt/" target="_blank" rel="noopener">Instagram @hanakun.mkt</a>
@@ -657,7 +665,7 @@ a.pic:hover .im{transform:translateY(-5px) rotate(-1deg);border-color:var(--gree
   <ol><li>按下「前往 IG 私訊」</li><li>在訊息框貼上（電腦按 Ctrl＋V，手機長按選「貼上」）</li><li>送出，花君就會收到您選的方案</li></ol>
   <div class="row"><a class="btn main" id="dmGo" href="https://ig.me/m/hanakun.mkt" target="_blank" rel="noopener">前往 IG 私訊</a><button type="button" class="x" id="dmX">返回修改</button></div>
 </div></div>
-<a class="fab" href="https://ig.me/m/hanakun.mkt" target="_blank" rel="noopener" aria-label="IG 私訊花君行銷"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>私訊</a>
+<div class="fabs"><a class="totop" id="totop" href="#top" aria-label="回到最上面"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 14l6-6 6 6"/></svg></a><a class="fab" href="https://ig.me/m/hanakun.mkt" target="_blank" rel="noopener" aria-label="IG 私訊花君行銷"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>私訊</a></div>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <script>
@@ -752,5 +760,6 @@ a.pic:hover .im{transform:translateY(-5px) rotate(-1deg);border-color:var(--gree
   addEventListener('resize',function(){ if(innerWidth>760) set(false); });
 })();
 </script>
+<script>(function(){var t=document.getElementById("totop");function f(){t.classList.toggle("show",scrollY>innerHeight*0.8)}addEventListener("scroll",f,{passive:true});f();t.addEventListener("click",function(e){e.preventDefault();scrollTo({top:0,behavior:"smooth"});});})();</script>
 </body>
 </html>
