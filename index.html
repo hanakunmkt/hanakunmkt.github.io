@@ -211,6 +211,10 @@ a.pic:hover .im{transform:translateY(-5px) rotate(-1deg);border-color:var(--gree
 .btn[aria-disabled="true"]{opacity:.45;pointer-events:none}
 .cartbar{position:fixed;left:50%;bottom:14px;translate:-50% 0;z-index:30;display:flex;align-items:center;gap:12px;background:var(--green);color:#FFF8EE;border-radius:999px;padding:8px 8px 8px 20px;box-shadow:0 10px 24px -10px rgba(0,0,0,.4);max-width:calc(100% - 24px);transition:opacity .25s,transform .3s}
 .cartbar[hidden]{display:none}
+.fab{position:fixed;right:16px;bottom:16px;z-index:31;display:flex;align-items:center;gap:6px;background:var(--red);color:#FFF8EE;text-decoration:none;border-radius:999px;padding:12px 18px 12px 14px;font-family:var(--display);font-weight:700;font-size:16px;box-shadow:0 10px 24px -10px rgba(0,0,0,.45);transition:bottom .3s,transform .2s}
+.fab:hover{transform:translateY(-2px)}
+.fab svg{width:24px;height:24px;flex:none}
+.cartbar:not([hidden]) ~ .fab{bottom:76px}
 .cartbar span{font-size:14px;white-space:nowrap;flex:none}
 .cartbar a{flex:none;background:var(--red);color:#FFF8EE;text-decoration:none;border-radius:999px;padding:6px 16px;font-family:var(--display);font-weight:700;font-size:15px}
 .dm{position:fixed;inset:0;z-index:50;background:rgba(30,40,32,.45);display:grid;place-items:center;padding:16px}
@@ -653,6 +657,7 @@ a.pic:hover .im{transform:translateY(-5px) rotate(-1deg);border-color:var(--gree
   <ol><li>按下「前往 IG 私訊」</li><li>在訊息框貼上（電腦按 Ctrl＋V，手機長按選「貼上」）</li><li>送出，花君就會收到您選的方案</li></ol>
   <div class="row"><a class="btn main" id="dmGo" href="https://ig.me/m/hanakun.mkt" target="_blank" rel="noopener">前往 IG 私訊</a><button type="button" class="x" id="dmX">返回修改</button></div>
 </div></div>
+<a class="fab" href="https://ig.me/m/hanakun.mkt" target="_blank" rel="noopener" aria-label="IG 私訊花君行銷"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>私訊</a>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <script>
