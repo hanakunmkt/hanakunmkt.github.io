@@ -12,7 +12,7 @@
 <meta property="og:description" content="社群代營運、短影音、SEO／GEO 文章。私訊 IG 免費健檢。">
 <meta property="og:image" content="https://hanakunmkt.github.io/img/og.png">
 <meta property="og:url" content="https://hanakunmkt.github.io/">
-<meta name="theme-color" content="#F6F1E7">
+<meta name="theme-color" content="#F7F1DB">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Yusei+Magic&family=Chiron+GoRound+TC:wght@700&family=LXGW+WenKai+TC:wght@400;700&family=Gochi+Hand&family=Noto+Sans+TC:wght@400;500;700&display=swap">
@@ -22,8 +22,8 @@
 <style>
 :root{
   color-scheme: light;
-  --paper:#F6F1E7;
-  --card:#FBF8F1;
+  --paper:#F7F1DB;
+  --card:#FCF9EC;
   --green:#22632E;
   --green-2:#4A6B55;
   --tint:#DAE4CF;
@@ -71,6 +71,15 @@ h1,h2,h3,h4{text-wrap:balance}
 .nav a.lk:hover::after,.nav a.lk.on::after{transform:scaleX(1)}
 .nav .price-jump{font-family:var(--display);font-weight:700;font-size:15px;text-decoration:none;color:#FFF8EE;background:var(--green);border-radius:999px;padding:4px 14px;white-space:nowrap;transition:background .25s}
 .nav .price-jump:hover{background:var(--red)}
+.menu-btn{display:none;flex:none;width:40px;height:40px;border:2px solid var(--green);border-radius:12px;background:var(--card);padding:0;cursor:pointer;flex-direction:column;align-items:center;justify-content:center;gap:4px}
+.menu-btn span{display:block;width:18px;height:2px;border-radius:2px;background:var(--green);transition:transform .25s,opacity .2s}
+.nav.menu-open .menu-btn span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.nav.menu-open .menu-btn span:nth-child(2){opacity:0}
+.nav.menu-open .menu-btn span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+.mmenu{position:absolute;left:16px;right:16px;top:calc(100% + 6px);background:var(--card);border:2px solid var(--green);border-radius:18px;padding:8px;display:grid;grid-template-columns:1fr 1fr;gap:6px;box-shadow:0 14px 28px -16px rgba(31,94,44,.5)}
+.mmenu[hidden]{display:none}
+.mmenu a{display:block;text-align:center;text-decoration:none;color:var(--green);font-weight:500;padding:10px 6px;border-radius:12px;background:var(--paper)}
+.mmenu a:active,.mmenu a:hover{background:var(--tint)}
 
 /* 開頭 */
 .hero{display:grid;grid-template-columns:1.05fr .95fr;gap:24px 40px;align-items:center;padding-block:48px 40px}
@@ -324,6 +333,8 @@ a.pic:hover .im{transform:translateY(-5px) rotate(-1deg);border-color:var(--gree
   .quick{margin-inline:auto}
   .nav ul{display:flex}
   .nav ul li.ex{display:none}
+  .menu-btn{display:flex}
+  .nav .wrap{gap:10px}
   .svc{grid-template-columns:1fr}
   .about{grid-template-columns:1fr;text-align:center}
   .about .skills{justify-content:center}
@@ -331,7 +342,8 @@ a.pic:hover .im{transform:translateY(-5px) rotate(-1deg);border-color:var(--gree
 }
 @media (max-width:480px){
   body{font-size:15px}
-  .nav ul{gap:12px;font-size:14px}
+  .nav ul{gap:10px;font-size:14px}
+  .nav .price-jump{font-size:14px;padding:4px 12px}
   .nav .brand span{display:none}
   .quick b{font-size:17px}
   .g2{grid-template-columns:1fr}
@@ -340,6 +352,9 @@ a.pic:hover .im{transform:translateY(-5px) rotate(-1deg);border-color:var(--gree
   .btn{font-size:16px;padding:11px 20px}
   .flow{grid-template-columns:1fr}
   .steps3>div{grid-template-columns:56px 1fr}
+}
+@media (max-width:359px){
+  .nav ul{display:none}
 }
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important}
@@ -361,6 +376,10 @@ a.pic:hover .im{transform:translateY(-5px) rotate(-1deg);border-color:var(--gree
       <li class="ex"><a class="lk" href="#faq">常見問題</a></li>
     </ul>
     <a class="price-jump" href="#pricing">價格一覽</a>
+    <button type="button" class="menu-btn" id="menuBtn" aria-label="開啟選單" aria-expanded="false" aria-controls="mmenu"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mmenu" id="mmenu" hidden>
+    <a href="#check">免費健檢</a><a href="#cases">成功案例</a><a href="#pricing">價格一覽</a><a href="#about">為什麼找花君</a><a href="#flow">合作流程</a><a href="#faq">常見問題</a>
   </div>
 </nav>
 
@@ -645,7 +664,7 @@ a.pic:hover .im{transform:translateY(-5px) rotate(-1deg);border-color:var(--gree
   function onScroll(){
     nav.classList.toggle('scrolled',scrollY>10);
     var cur=-1;
-    targets.forEach(function(t,i){ if(t&&t.getBoundingClientRect().top<innerHeight*.35) cur=i; });
+    targets.forEach(function(t,i){ if(t&&t.offsetParent!==null&&t.getBoundingClientRect().top<innerHeight*.35) cur=i; });
     links.forEach(function(a,i){ a.classList.toggle('on',i===cur); });
   }
   addEventListener('scroll',onScroll,{passive:true}); onScroll();
@@ -717,6 +736,15 @@ a.pic:hover .im{transform:translateY(-5px) rotate(-1deg);border-color:var(--gree
   function openHash(id){ var t=id&&document.getElementById(id); var f=t&&t.closest('.fold'); if(f) set(f,true); }
   document.addEventListener('click',function(e){ var a=e.target.closest&&e.target.closest('a[href^="#"]'); if(a) openHash(a.getAttribute('href').slice(1)); });
   openHash(location.hash.slice(1));
+})();
+
+(function(){
+  var nav=document.getElementById('nav'),btn=document.getElementById('menuBtn'),m=document.getElementById('mmenu');
+  function set(on){ m.hidden=!on; nav.classList.toggle('menu-open',on); btn.setAttribute('aria-expanded',on?'true':'false'); btn.setAttribute('aria-label',on?'關閉選單':'開啟選單'); }
+  btn.addEventListener('click',function(){ set(m.hidden); });
+  m.addEventListener('click',function(e){ if(e.target.closest('a')) set(false); });
+  document.addEventListener('click',function(e){ if(!m.hidden&&!nav.contains(e.target)) set(false); });
+  addEventListener('resize',function(){ if(innerWidth>760) set(false); });
 })();
 </script>
 </body>
