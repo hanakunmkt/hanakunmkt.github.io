@@ -165,6 +165,10 @@ a.pic:hover .im{transform:translateY(-5px) rotate(-1deg);border-color:var(--gree
 .reel{text-align:center;justify-items:center}
 .addon-box{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 20px;border:2px dashed var(--red);border-radius:18px;padding:14px 20px;background:color-mix(in srgb,var(--card) 80%,transparent)}
 .addon-box p{margin:0;flex:1 1 280px}
+.case.extra{border-color:var(--red)}
+.bonus{position:absolute;right:14px;top:-17px;rotate:11deg;background:var(--red);color:#F8F5E7;font-family:var(--display);font-weight:700;font-size:16px;letter-spacing:.08em;line-height:1;padding:8px 14px;border-radius:999px;border:2px solid #F8F5E7}
+.case.extra .addon-box{grid-column:auto;align-content:center;align-self:start}
+
 .addon-box p b{color:var(--red)}
 .addon-box .btn{font-size:16px;padding:8px 18px}
 
@@ -173,7 +177,7 @@ a.pic:hover .im{transform:translateY(-5px) rotate(-1deg);border-color:var(--gree
 .case{display:block}
 .case-head{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;margin-bottom:18px}
 .case-head h3{margin:0;font-size:clamp(21px,2.6vw,26px)}
-.story{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr 1.15fr;gap:34px}
+.story{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1.15fr;gap:34px}
 .st{position:relative;padding:0;display:grid;align-content:start;gap:4px}
 .st+.st::before{content:"";position:absolute;left:-26px;top:50%;width:18px;height:18px;translate:0 -50%;background:var(--green);clip-path:polygon(0 15%,60% 15%,60% 0,100% 50%,60% 100%,60% 85%,0 85%)}
 .st .lb{justify-self:start;font-family:var(--display);font-weight:700;color:#F8F5E7;background:var(--green);border-radius:8px;padding:1px 14px;font-size:15px}
@@ -376,30 +380,28 @@ a.pic:hover .im{transform:translateY(-5px) rotate(-1deg);border-color:var(--gree
 
       <article class="frame case rv">
         <span class="seal" aria-hidden="true">君</span>
-        <header class="case-head"><span class="tag">社群｜會員活動</span><h3>痛點：會員不夠多、回購率太低</h3></header>
+        <header class="case-head"><span class="tag">社群｜會員活動</span><h3>痛點：品牌曝光不足，想提升會員數</h3></header>
         <ol class="story">
-          <li class="st"><span class="lb">問題</span><p>有辦會員活動，但沒什麼人記得，也沒帶動加入和回購。</p></li>
           <li class="st"><span class="lb">做法</span><p>研究競品的會員制度，把會員日包裝成有記憶點的主題活動；實體活動現場再搭配「加入會員＋分享抽獎」，讓客人順手幫您曝光。</p></li>
           <li class="st res"><span class="lb">成果</span><div class="big">+51<small>%</small></div><div class="cap">會員數比去年同期成長</div><p>會員數比去年同期多 51%，主題活動的廣告 ROAS 也比一般圖文高 2～3%。</p></li>
         </ol>
         <div class="gallery g2">
           <p class="gh">實際貼文</p>
-          <a class="pic" href="https://www.facebook.com/share/p/18rREgGuMt/" target="_blank" rel="noopener">
-            <span class="im"><img src="img/social-memberday.jpg" alt="人氣店貓主題會員日活動圖" width="700" height="467" loading="lazy"></span>
-            <span class="t">活動一｜人氣店貓主題會員日</span><span class="m"><span class="go">看貼文 ↗</span></span>
-          </a>
           <a class="pic" href="https://www.facebook.com/share/p/16wM35jZQ2/" target="_blank" rel="noopener">
             <span class="im"><img src="img/social-expo.jpg" alt="2025 台北寵物展攤位宣傳圖" width="700" height="700" loading="lazy" style="object-position:50% 30%"></span>
-            <span class="t">活動二｜寵物展 × 社群分享抽獎</span><span class="m"><span class="go">看貼文 ↗</span></span>
+            <span class="t">活動一｜寵物展 × 社群分享抽獎</span><span class="m"><span class="go">看貼文 ↗</span></span>
+          </a>
+          <a class="pic" href="https://www.facebook.com/share/p/18rREgGuMt/" target="_blank" rel="noopener">
+            <span class="im"><img src="img/social-memberday.jpg" alt="人氣店貓主題會員日活動圖" width="700" height="467" loading="lazy"></span>
+            <span class="t">活動二｜人氣店貓主題會員日</span><span class="m"><span class="go">看貼文 ↗</span></span>
           </a>
         </div>
       </article>
 
       <article class="frame case rv">
         <span class="seal" aria-hidden="true">君</span>
-        <header class="case-head"><span class="tag">SEO／GEO 文章</span><h3>痛點：官網有商品，客人卻搜尋不到</h3></header>
+        <header class="case-head"><span class="tag">SEO／GEO 文章</span><h3>痛點：品牌在 Google 排名較落後</h3></header>
         <ol class="story">
-          <li class="st"><span class="lb">問題</span><p>客人上 Google 找答案時，看到的都是別家的文章和商品。</p></li>
           <li class="st"><span class="lb">做法</span><p>找出客人真正在搜尋的關鍵字，分析競品後規劃文章架構再寫；上線後持續追蹤排名，排不上去就再優化。</p></li>
           <li class="st res"><span class="lb">成果</span><div class="big">多<small>篇</small></div><div class="cap">Google 排名 #1、#2、#3</div><p>多篇文章拿下 Google 前 3 名，也都被 Google AI 摘要引用，客人一搜尋就看到品牌。</p></li>
         </ol>
@@ -425,9 +427,8 @@ a.pic:hover .im{transform:translateY(-5px) rotate(-1deg);border-color:var(--gree
 
       <article class="frame case rv">
         <span class="seal" aria-hidden="true">君</span>
-        <header class="case-head"><span class="tag">短影音</span><h3>痛點：想拍影片，卻不知道拍什麼</h3></header>
+        <header class="case-head"><span class="tag">短影音</span><h3>痛點：想做短影音，卻沒時間剪</h3></header>
         <ol class="story">
-          <li class="st"><span class="lb">問題</span><p>圖文很難把品牌的故事講清楚，客人對品牌沒感覺。</p></li>
           <li class="st"><span class="lb">做法</span><p>從企劃、腳本到剪輯、文案一次做完，依目的拍成不同類型的影片。</p></li>
           <li class="st res"><span class="lb">成果</span><div class="big">多種<small>影片類型</small></div><div class="cap">品牌故事、議題討論、時事內容</div><p>品牌故事讓客人認同您，議題討論帶動留言，時事內容搭上話題增加觸及。</p></li>
         </ol>
@@ -448,17 +449,15 @@ a.pic:hover .im{transform:translateY(-5px) rotate(-1deg);border-color:var(--gree
         </div>
       </article>
 
-      <article class="frame case rv">
-        <span class="seal" aria-hidden="true">君</span>
-        <header class="case-head"><span class="tag">Threads 經營</span><h3>痛點：發了廣告文，Threads 上沒人理</h3></header>
+      <article class="frame case rv extra">
+        <span class="bonus">加碼</span>
+        <header class="case-head"><span class="tag">Threads 經營</span><h3>痛點：Threads 不知如何進場</h3></header>
         <ol class="story">
-          <li class="st"><span class="lb">問題</span><p>Threads 的使用者不想看廣告，一直發商品文只會被滑掉。</p></li>
           <li class="st"><span class="lb">做法</span><p>讓品牌帳號像真人一樣聊天：主動到相關話題下留言、有活動就去對的貼文分享、看到網友的抱怨馬上接話，把它變成品牌活動。</p></li>
-          <li class="st res"><span class="lb">成果</span><div class="big">100<small>萬+</small></div><div class="cap">單月瀏覽次數</div><p>單月瀏覽突破 100 萬，紙袋回收活動收到大量迴響，品牌和客人之間多了很多自然的對話。</p></li>
+          <li class="st res"><span class="lb">成果</span><div class="big">100<small>萬+</small></div><div class="cap">單月瀏覽次數</div><p>單月瀏覽突破 100 萬，品牌和客人之間多了很多自然的對話。</p></li>
         </ol>
         <div class="gallery g2">
           <figure class="pic"><span class="im"><img src="img/threads-100w.jpg" alt="Threads 30 天摘要，瀏覽次數 100.1 萬" width="700" height="649" loading="lazy" style="object-fit:contain"></span><figcaption class="t">Threads 後台：30 天瀏覽 100.1 萬</figcaption></figure>
-          <figure class="pic"><span class="im"><img src="img/th-bags-result.jpg" alt="紙袋回收活動收到的大量紙袋" width="500" height="888" loading="lazy" style="object-position:50% 40%"></span><figcaption class="t">紙袋回收活動收到的紙袋</figcaption></figure>
           <div class="addon-box">
             <p><b>Threads 也想有人顧？</b>Threads 小編代營運可以另外加購，私訊告訴我您的需求，再依需求報價。</p>
             <a class="btn main" href="https://ig.me/m/hanakun.mkt" target="_blank" rel="noopener">我想要 Threads</a>
